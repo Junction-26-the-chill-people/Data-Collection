@@ -1,0 +1,17 @@
+**/.deps/
+**/.tmp/
+**/work/
+**/.claude/
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/.env
+**/.env.*
+**/*.key
+**/*.pem
+**/*.crt
+**/*.p12
+**/*.part
+datasets/nfi_fared_digital_traces/raw/
+datasets/location_sources/studentlife_tooling_sample/sample_dataset.tar.bz2
+datasets/location_sources/syn_roadgps/raw/RoadGPS.csv

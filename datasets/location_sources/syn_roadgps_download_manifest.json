@@ -1,0 +1,47 @@
+{
+  "repository": "Smile1120/SYN-RoadGps",
+  "revision": "482d9f29bbee8282626e5136f16924366bcf5f6e",
+  "license": "CC-BY-4.0",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 2552,
+      "sha256": "f5e365958df2f444910bf4535c13cce06f4f5cee9d9f5c1de2991665bc787328",
+      "publisherChecksum": "9f956b52b268c0d990109ffdde125182df660d7a",
+      "publisherAlgorithm": "git-sha1",
+      "url": "https://huggingface.co/datasets/Smile1120/SYN-RoadGps/resolve/482d9f29bbee8282626e5136f16924366bcf5f6e/.gitattributes"
+    },
+    {
+      "file": "README.md",
+      "bytes": 759,
+      "sha256": "73606989b6801a2c84c713a4422d1929f186c2592019c53dd4264cf8f35601f2",
+      "publisherChecksum": "794272a9e5918328e8f6858bfa1a86ac5f46e5e4",
+      "publisherAlgorithm": "git-sha1",
+      "url": "https://huggingface.co/datasets/Smile1120/SYN-RoadGps/resolve/482d9f29bbee8282626e5136f16924366bcf5f6e/README.md"
+    },
+    {
+      "file": "RoadGPS.csv",
+      "bytes": 52805221,
+      "sha256": "66e504de9fcbef38c7302ff3b0bc7ac7040ab6fbb91823d88fcbd5a05c27710e",
+      "publisherChecksum": "66e504de9fcbef38c7302ff3b0bc7ac7040ab6fbb91823d88fcbd5a05c27710e",
+      "publisherAlgorithm": "sha256",
+      "url": "https://huggingface.co/datasets/Smile1120/SYN-RoadGps/resolve/482d9f29bbee8282626e5136f16924366bcf5f6e/RoadGPS.csv"
+    },
+    {
+      "file": "roadmap.geo",
+      "bytes": 7327374,
+      "sha256": "d8b1019ae76b0bb32610409a7cd9b198177b2247405021c1f44613bbb93764a8",
+      "publisherChecksum": "543ec31ff903643478e22134462b6f27f288a492",
+      "publisherAlgorithm": "git-sha1",
+      "url": "https://huggingface.co/datasets/Smile1120/SYN-RoadGps/resolve/482d9f29bbee8282626e5136f16924366bcf5f6e/roadmap.geo"
+    },
+    {
+      "file": "roadmap.rel",
+      "bytes": 3036045,
+      "sha256": "defe832d8bad76c9782e7bd2853fe5f4f9843581c6fc56e315eb23748d94a0d3",
+      "publisherChecksum": "971501d6603f992d854406c3ca33f178f8058df2",
+      "publisherAlgorithm": "git-sha1",
+      "url": "https://huggingface.co/datasets/Smile1120/SYN-RoadGps/resolve/482d9f29bbee8282626e5136f16924366bcf5f6e/roadmap.rel"
+    }
+  ]
+}

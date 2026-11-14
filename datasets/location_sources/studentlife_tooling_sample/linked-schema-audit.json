@@ -1,0 +1,77 @@
+{
+  "u00": {
+    "gpsRows": 11,
+    "gpsStartUTC": "2013-03-27T04:02:43+00:00",
+    "gpsEndUTC": "2013-03-27T07:02:48+00:00",
+    "pamRows": 390,
+    "pamInsideGpsSpan": 1,
+    "nearestPAMSeconds": 261,
+    "phqRows": 2,
+    "phqTypes": [
+      "pre",
+      "post"
+    ],
+    "gpsAccuracyRange": [
+      22.0,
+      5000.0
+    ],
+    "validCoordinateRows": 11,
+    "nonIncreasingTimestamps": 0,
+    "accuracyAbove100Meters": 4,
+    "maxGapSeconds": 2395,
+    "missingColumns": {
+      "network_type": 1,
+      "travelstate": 1
+    }
+  },
+  "u01": {
+    "gpsRows": 14,
+    "gpsStartUTC": "2013-03-27T04:03:29+00:00",
+    "gpsEndUTC": "2013-03-27T08:23:30+00:00",
+    "pamRows": 140,
+    "pamInsideGpsSpan": 5,
+    "nearestPAMSeconds": 6,
+    "phqRows": 2,
+    "phqTypes": [
+      "pre",
+      "post"
+    ],
+    "gpsAccuracyRange": [
+      6.0,
+      71.126
+    ],
+    "validCoordinateRows": 14,
+    "nonIncreasingTimestamps": 0,
+    "accuracyAbove100Meters": 0,
+    "maxGapSeconds": 1208,
+    "missingColumns": {
+      "network_type": 9,
+      "travelstate": 9
+    }
+  },
+  "u02": {
+    "gpsRows": 13,
+    "gpsStartUTC": "2013-03-27T04:16:37+00:00",
+    "gpsEndUTC": "2013-03-27T08:16:38+00:00",
+    "pamRows": 222,
+    "pamInsideGpsSpan": 0,
+    "nearestPAMSeconds": 988,
+    "phqRows": 2,
+    "phqTypes": [
+      "pre",
+      "post"
+    ],
+    "gpsAccuracyRange": [
+      8.0,
+      31.821
+    ],
+    "validCoordinateRows": 13,
+    "nonIncreasingTimestamps": 0,
+    "accuracyAbove100Meters": 0,
+    "maxGapSeconds": 1205,
+    "missingColumns": {
+      "network_type": 1,
+      "travelstate": 1
+    }
+  }
+}

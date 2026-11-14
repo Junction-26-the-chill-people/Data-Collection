@@ -1,0 +1,55 @@
+{
+  "release": "daily-linked/1.5.0",
+  "updatedAt": "2026-11-14T17:30:37.300494+00:00",
+  "analysisModel": "routine-change/2.0.0",
+  "displayPolicy": "noteworthy-display/1.0.0",
+  "researchPeople": 4948,
+  "generatedProfiles": 11,
+  "generatedDays": 1320,
+  "studentlife": {
+    "source": "https://zenodo.org/records/3529253",
+    "sourceRows": {
+      "PAM": 9040,
+      "Sleep": 1644,
+      "gps": 202877,
+      "PHQ-9": 84
+    },
+    "counts": {
+      "participantDays": 3389,
+      "gpsDays": 2824,
+      "qualityGpsDays": 2822,
+      "checkinDays": 2298,
+      "pairedGpsCheckinDays": 2116,
+      "displayedPoints": 172715,
+      "acceptedPoints": 194376,
+      "displaySamplingOmitted": 21661,
+      "accuracyExcluded": 8501,
+      "longGap": 2983,
+      "speedJump": 99
+    }
+  },
+  "verification": {
+    "pythonTests": 32,
+    "javascriptSuites": 16,
+    "uiRenderCases": 351,
+    "integrationCombinations": 10907,
+    "syntheticComponentPayloadsValidated": 3960,
+    "stableNoiseTrials": 400,
+    "stableNoiseFlaggedSeries": 0,
+    "monthlyHistoriesPreserved": 4948,
+    "monthlyPointsPreserved": 41891,
+    "browserChecks": [
+      "loopback offline-vector viewer, desktop 1280px and phone 375px",
+      "Noah sustained, Sofia 10 March noted and 11 March steady, Mila slow drift",
+      "map below navigation, reference drawer, picker and tour; no horizontal overflow",
+      "distinct personal neighbourhoods; engine persistence/drift evidence"
+    ],
+    "details": "docs/verification.md"
+  },
+  "presentation": "within-ui/3.0.0",
+  "componentContract": "component-signal/0.1.0",
+  "combinedPreview": "combined-preview/0.1.0",
+  "exportContract": "1.2.0",
+  "sourceRepository": "https://github.com/Junction-26-the-chill-people/Data-Collection",
+  "repositoryVerification": "docs/repository-tests.json"
+}

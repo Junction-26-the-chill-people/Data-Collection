@@ -1,0 +1,83 @@
+{
+  "modelVersion": "routine-change/2.0.0",
+  "participants": 4959,
+  "records": 43211,
+  "scored": 17596,
+  "statuses": {
+    "baseline": 13702,
+    "collecting_window": 3207,
+    "no_change": 15303,
+    "change_detected": 1972,
+    "insufficient_data": 8709,
+    "review_suggested": 318
+  },
+  "synthetic": [
+    {
+      "id": "sim-01",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 86
+    },
+    {
+      "id": "sim-02",
+      "latest": "review_suggested",
+      "score": 66,
+      "scored": 86
+    },
+    {
+      "id": "sim-03",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 86
+    },
+    {
+      "id": "sim-04",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 86
+    },
+    {
+      "id": "sim-05",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 49
+    },
+    {
+      "id": "sim-06",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 86
+    },
+    {
+      "id": "sim-07",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 86
+    },
+    {
+      "id": "sim-08",
+      "latest": "review_suggested",
+      "score": 65,
+      "scored": 86
+    },
+    {
+      "id": "sim-09",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 86
+    },
+    {
+      "id": "sim-10",
+      "latest": "no_change",
+      "score": 0,
+      "scored": 86
+    },
+    {
+      "id": "sim-11",
+      "latest": "no_change",
+      "score": 27,
+      "scored": 86
+    }
+  ],
+  "failures": []
+}

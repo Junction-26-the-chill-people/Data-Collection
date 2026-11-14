@@ -1,0 +1,35 @@
+{
+  "record": "cgf63-kme28",
+  "version": "v2",
+  "license": "CC-BY-4.0",
+  "files": [
+    {
+      "file": "GPS_Baseline.csv",
+      "bytes": 131304,
+      "publisherChecksum": "md5:4becbbddbfcf4e32e9b1ce9ffd26cdb5",
+      "sha256": "b4bbb2ae5e1c31c8da1b2d9b56d960e2171fcfd0e3b9e4de4cb9d1b082fff421",
+      "url": "https://b2share.eudat.eu/api/records/cgf63-kme28/files/GPS_Baseline.csv/content"
+    },
+    {
+      "file": "GPS_EMA.csv",
+      "bytes": 370616,
+      "publisherChecksum": "md5:3504f06da1d98630aa52611fe4c38ab2",
+      "sha256": "394336857498adc6f7c97e1294426bfdc293c63da2a7ef8c13c6b2e33a858530",
+      "url": "https://b2share.eudat.eu/api/records/cgf63-kme28/files/GPS_EMA.csv/content"
+    },
+    {
+      "file": "Baseline.csv",
+      "bytes": 966914,
+      "publisherChecksum": "md5:ec05d9448e98085925516999513b0b0c",
+      "sha256": "0518c94105c53009b4a19668e45817fac5cd68d14de4f86d6aae6b381d2d7e47",
+      "url": "https://b2share.eudat.eu/api/records/cgf63-kme28/files/Baseline.csv/content"
+    },
+    {
+      "file": "EMA.csv",
+      "bytes": 2333014,
+      "publisherChecksum": "md5:66f35a5afb42e6dee025a271acced6b5",
+      "sha256": "fbff34486ac2d4ff61d5e92b2caa7276cec51719973fe232df3096d3357f8d87",
+      "url": "https://b2share.eudat.eu/api/records/cgf63-kme28/files/EMA.csv/content"
+    }
+  ]
+}

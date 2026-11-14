@@ -1,0 +1,76 @@
+{
+  "Baseline": {
+    "timedGpsRows": 3388,
+    "medianAbsoluteNearestSurveyOffsetMinutes": 120.0,
+    "mostCommonSignedOffsetsMinutes": [
+      [
+        120.0,
+        2315
+      ],
+      [
+        60.0,
+        1072
+      ],
+      [
+        3033.0,
+        1
+      ]
+    ],
+    "validCoordinatesNearestSurveyWithin1Minute": 0,
+    "validCoordinatesNearestSurveyWithin5Minutes": 0,
+    "validCoordinatesNearestSurveyWithin1Hour": 988,
+    "sameRowUserEquality": 7,
+    "pairedRowCount": 2704
+  },
+  "EMA": {
+    "timedGpsRows": 9863,
+    "medianAbsoluteNearestSurveyOffsetMinutes": 120.0,
+    "mostCommonSignedOffsetsMinutes": [
+      [
+        120.0,
+        5131
+      ],
+      [
+        60.0,
+        4645
+      ],
+      [
+        56.0,
+        7
+      ],
+      [
+        116.0,
+        6
+      ],
+      [
+        113.0,
+        5
+      ],
+      [
+        114.0,
+        4
+      ],
+      [
+        57.0,
+        4
+      ],
+      [
+        52.0,
+        4
+      ],
+      [
+        115.0,
+        3
+      ],
+      [
+        104.0,
+        3
+      ]
+    ],
+    "validCoordinatesNearestSurveyWithin1Minute": 0,
+    "validCoordinatesNearestSurveyWithin5Minutes": 0,
+    "validCoordinatesNearestSurveyWithin1Hour": 4275,
+    "sameRowUserEquality": 11541,
+    "pairedRowCount": 11541
+  }
+}

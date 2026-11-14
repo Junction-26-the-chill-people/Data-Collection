@@ -1,0 +1,74 @@
+{
+  "sourceDOI": "10.5281/zenodo.3529253",
+  "sourceVersion": "1.0.0",
+  "license": "CC-BY-4.0",
+  "archiveBytes": 230469489,
+  "publisherArchiveMD5": "353ae79f157097a57bff1c004634ba1b",
+  "fullArchiveMD5Verified": false,
+  "method": "Selected ZIP members fetched via HTTP Range, deflate decompressed and ZIPCRC verified; RDS bytes preserved. No whole archive downloaded.",
+  "responseHeaders": [
+    {
+      "range": "bytes 230403932-230469488/230469489",
+      "etag": null,
+      "lastModified": null
+    },
+    {
+      "range": "bytes 73480-122625/230469489",
+      "etag": null,
+      "lastModified": null
+    },
+    {
+      "range": "bytes 123232-151282/230469489",
+      "etag": null,
+      "lastModified": null
+    },
+    {
+      "range": "bytes 172718720-175687915/230469489",
+      "etag": null,
+      "lastModified": null
+    },
+    {
+      "range": "bytes 230457713-230463264/230469489",
+      "etag": null,
+      "lastModified": null
+    }
+  ],
+  "files": [
+    {
+      "file": "PAM.Rds",
+      "archiveMember": "dataset_rds/EMA/PAM.Rds",
+      "bytes": 45675,
+      "compressedBytes": 45050,
+      "zipCRC32": "0xd3c0a872",
+      "sha256": "2bbded32ee54c761acd9933d4157d67cfc43da5770b7b5043e67819b9efba2c5",
+      "archiveURL": "https://zenodo.org/api/records/3529253/files/dataset_rds.zip/content"
+    },
+    {
+      "file": "Sleep.Rds",
+      "archiveMember": "dataset_rds/EMA/Sleep.Rds",
+      "bytes": 24056,
+      "compressedBytes": 23955,
+      "zipCRC32": "0x8604d1c1",
+      "sha256": "72fba2e32c6b5ea609a18cb2b8c042892c4bc76dfae33f1ac8b5be93e0578e88",
+      "archiveURL": "https://zenodo.org/api/records/3529253/files/dataset_rds.zip/content"
+    },
+    {
+      "file": "gps.Rds",
+      "archiveMember": "dataset_rds/sensing/gps.Rds",
+      "bytes": 3035790,
+      "compressedBytes": 2965100,
+      "zipCRC32": "0xe81c21d6",
+      "sha256": "7930f530951385ef15bb75d80b648f44a801f09732cf14c4f3f9023cc1895e49",
+      "archiveURL": "https://zenodo.org/api/records/3529253/files/dataset_rds.zip/content"
+    },
+    {
+      "file": "PHQ-9.Rds",
+      "archiveMember": "dataset_rds/survey/PHQ-9.Rds",
+      "bytes": 1456,
+      "compressedBytes": 1456,
+      "zipCRC32": "0xff67a55b",
+      "sha256": "b0cbe76b1e505431947aebfd340ade43eadc90fec5b0d823879c32edc710d52b",
+      "archiveURL": "https://zenodo.org/api/records/3529253/files/dataset_rds.zip/content"
+    }
+  ]
+}

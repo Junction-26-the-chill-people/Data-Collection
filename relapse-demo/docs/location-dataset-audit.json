@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "source": {
+    "id": "syn-roadgps",
+    "publisher": "Smile1120",
+    "url": "https://huggingface.co/datasets/Smile1120/SYN-RoadGps",
+    "revision": "482d9f29bbee8282626e5136f16924366bcf5f6e",
+    "license": "CC-BY-4.0",
+    "synthetic": true,
+    "clinicalLink": null,
+    "crs": "longitude/latitude degrees; datum not declared by publisher",
+    "timeEncoding": "ISO 8601 UTC strings",
+    "sourceSHA256": "66e504de9fcbef38c7302ff3b0bc7ac7040ab6fbb91823d88fcbd5a05c27710e"
+  },
+  "counts": {
+    "rows": 10000,
+    "validRows": 10000,
+    "points": 546273,
+    "singlePointRows": 2,
+    "edges": 536273,
+    "nonIncreasingEdges": 0,
+    "repeatedPositionEdges": 0,
+    "longGapEdges": 0,
+    "speedAbove55mpsEdges": 606,
+    "rowsWithSplitEdges": 195
+  },
+  "bounds": [
+    116.51706118398573,
+    39.7321403,
+    116.7593642744629,
+    39.98107237553259
+  ],
+  "pointCountPerTrajectory": {
+    "min": 1,
+    "median": 44.0,
+    "max": 328
+  },
+  "edgeSpeedMps": {
+    "0": 0.0592729741909632,
+    "0.5": 3.438633591348551,
+    "0.95": 12.097659602663697,
+    "0.99": 23.253871420966714,
+    "1": 222.90919668655914
+  },
+  "edgeGapSeconds": {
+    "min": 1.0,
+    "median": 10.0,
+    "max": 83.0
+  },
+  "invalidExamples": [],
+  "sampling": "First 50 parse-valid multi-point rows in original CSV order; no quality ranking; all corpus rows audited.",
+  "drawingPolicy": {
+    "maxSpeedMps": 55,
+    "maxGapSeconds": 300,
+    "splitNonIncreasingTimestamps": true,
+    "noInterpolation": true,
+    "interpretation": "Generic visualization integrity filter, not a walking-speed filter or clinical threshold. Preserve points, split segments; never connect across breaks."
+  },
+  "limitations": [
+    "No person identifiers, mood, physiology, home labels, travel-mode labels or repeated daily routines are provided. Each row is an independent generated trajectory.",
+    "Publisher claims road-constrained generation; source is not independently clinically validated. Road coordinate datum is unspecified; road-overlay agreement with OSM is not guaranteed.",
+    "Coordinate-to-coordinate lines are sampled chords, not full routed geometry. Do not imply walking or map-match silently."
+  ],
+  "roadIdentifierAudit": {
+    "geometryRows": 60681,
+    "geometryIdMin": 0,
+    "geometryIdMax": 60680,
+    "traceUniqueRoadIds": 25600,
+    "traceRoadIdMin": 143,
+    "traceRoadIdMax": 142502,
+    "traceUniqueRoadIdsAbsentFromGeometry": 13428,
+    "pointsWithRoadIdAbsentFromGeometry": 272951,
+    "warning": "Trace road IDs cannot reliably join supplied geometry IDs. No source road geometry is exported; do not infer a map match."
+  },
+  "localDatasets": [
+    {
+      "id": "psyche-d",
+      "coordinateFields": [],
+      "evidence": "Actual154-column parquet schema and feature dictionary; no latitude/longitude/GPS fields. Monthly aggregates cannot reconstruct routes.",
+      "license": "CC-BY-NC-4.0"
+    },
+    {
+      "id": "nfi-fared",
+      "coordinateFields": [],
+      "evidence": "All7 safely inspected pickle column schemas: Cache has altitude/course/speed/accuracy/time but no lat/lon. META_carrying_location means hand/pocket/rucksack, not a geographic location.",
+      "license": "Not supplied in downloaded card/metadata"
+    },
+    {
+      "id": "dryad-finnish-immigrants",
+      "coordinateFields": [],
+      "evidence": "Metadata human-subjects statement explicitly excludes GPS. Raw archive still unavailable; no fabricated file-level inspection.",
+      "license": "CC0-1.0"
+    }
+  ],
+  "exportedTraces": 50,
+  "exportedPoints": 3105,
+  "exportedRoadSegments": 0
+}

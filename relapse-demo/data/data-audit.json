@@ -1,0 +1,89 @@
+{
+  "sourceShape": [
+    35694,
+    154
+  ],
+  "uniqueParticipants": 4948,
+  "selectedIds": [
+    0,
+    1,
+    5,
+    7,
+    8,
+    9,
+    11,
+    14
+  ],
+  "selectedRecords": 85,
+  "timelineSlots": 92,
+  "missingByMetric": {
+    "steps": 7,
+    "sleep_hours": 7,
+    "sleep_efficiency": 7,
+    "bedtime_hour": 7,
+    "short_sleep_nights": 7,
+    "active_days": 7
+  },
+  "featureDefinitions": [
+    {
+      "id": "steps",
+      "label": "Daily steps (period mean)",
+      "unit": "steps",
+      "direction": "lower",
+      "floor": 1000,
+      "weight": 1,
+      "sourceColumn": "steps_awake_mean",
+      "definition": "Mean steps while awake in source feature window."
+    },
+    {
+      "id": "sleep_hours",
+      "label": "Sleep duration (recent mean)",
+      "unit": "h",
+      "direction": "both",
+      "floor": 0.75,
+      "weight": 1,
+      "sourceColumn": "sleep_asleep_mean_recent",
+      "definition": "Mean nightly minutes asleep over source last 4 days, divided by 60."
+    },
+    {
+      "id": "sleep_efficiency",
+      "label": "Weekday sleep efficiency",
+      "unit": "%",
+      "direction": "lower",
+      "floor": 5,
+      "weight": 0.5,
+      "sourceColumn": "sleep_ratio_asleep_in_bed_weekday_mean",
+      "definition": "Weekday mean asleep/in-bed ratio multiplied by 100."
+    },
+    {
+      "id": "bedtime_hour",
+      "label": "Sleep onset (adjusted hour)",
+      "unit": "h",
+      "direction": "both",
+      "floor": 1,
+      "weight": 0.5,
+      "sourceColumn": "sleep_main_start_hour_adj_median",
+      "definition": "Source adjusted sleep-start hour; 28 means 04:00 next day. Linear shifted scale, not ordinary clock hour."
+    },
+    {
+      "id": "short_sleep_nights",
+      "label": "Short sleep nights (source week)",
+      "unit": "nights",
+      "direction": "higher",
+      "floor": 1,
+      "weight": 0.5,
+      "sourceColumn": "sleep__hyposomnia_count_",
+      "definition": "Number of nights with less than 5 hours asleep in source last 7 days."
+    },
+    {
+      "id": "active_days",
+      "label": "Active days (source week)",
+      "unit": "days",
+      "direction": "lower",
+      "floor": 1,
+      "weight": 0.5,
+      "sourceColumn": "steps__active_day_count_",
+      "definition": "Days with >10,000 steps in source last 7 days."
+    }
+  ]
+}

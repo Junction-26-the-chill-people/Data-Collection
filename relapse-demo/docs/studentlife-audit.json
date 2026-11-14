@@ -1,0 +1,64 @@
+{
+  "sourceRows": {
+    "PAM": 9040,
+    "Sleep": 1644,
+    "gps": 202877,
+    "PHQ-9": 84
+  },
+  "sourceUsers": {
+    "PAM": 49,
+    "Sleep": 49,
+    "gps": 49,
+    "PHQ-9": 46
+  },
+  "counts": {
+    "participantDays": 3389,
+    "gpsDays": 2824,
+    "qualityGpsDays": 2822,
+    "checkinDays": 2298,
+    "pairedGpsCheckinDays": 2116,
+    "displayedPoints": 172715,
+    "acceptedPoints": 194376,
+    "displaySamplingOmitted": 21661,
+    "accuracyExcluded": 8501,
+    "longGap": 2983,
+    "speedJump": 99
+  },
+  "maxAccuracyMeters": 100,
+  "maxGapSeconds": 1800,
+  "maxSpeedMps": 55,
+  "maxDisplayPointsPerDay": 80,
+  "dayGrouping": "UTC calendar days; source epoch seconds preserved. No device-local timezone inferred.",
+  "default": {
+    "participantId": "studentlife-10",
+    "index": 6,
+    "date": "2013-03-30",
+    "bounds": [
+      -72.2910206,
+      43.701573,
+      -72.2839311,
+      43.7055085
+    ],
+    "selection": "Most raw check-ins then displayed GPS points among Hanover-area paired days spanning at least0.004longitude or0.003latitude degrees; display convenience, not evidence of clinical severity."
+  },
+  "source": {
+    "id": "studentlife",
+    "title": "StudentLife: recorded GPS + same-participant check-ins",
+    "url": "https://zenodo.org/records/3529253",
+    "doi": "10.5281/zenodo.3529253",
+    "version": "1.0.0",
+    "license": "CC-BY-4.0",
+    "synthetic": false,
+    "publisher": "Daniel Fryer, StudentLife R-format derivative; original study Wang et al.(2014)",
+    "timeZone": "UTC",
+    "sleepCodebookURL": "https://github.com/frycast/studentlife/tree/master/tests/testthat/testdata/sample",
+    "clinicalLink": "Shared source uid and timestamp; no cross-study join. PHQpre/post contextual only.",
+    "limitations": [
+      "Derivative contains49GPS/PAM/sleep IDs; original paper describes48students. Preserve observed identifiers; do not silently delete one to match paper.",
+      "No verified heart rate, step count or wearable sleep measurements in these four tables.",
+      "PAM picture index and sleep answers retain raw codes. Sleep display labels follow source EMA definition; no numeric sleep duration or PHQ score is inferred.",
+      "Recorded point chords are not verified street routes; transport unknown. No home inference.",
+      "Only four ZIP members downloaded; CRC/localSHA256 checked, wholearchiveMD5 not checked."
+    ]
+  }
+}

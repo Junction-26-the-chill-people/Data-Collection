@@ -1,0 +1,98 @@
+{
+  "startedAt": "2026-11-14T16:27:58.542968+00:00",
+  "javascript": [
+    {
+      "file": "cli.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: CLI preserves participant ID zero, synthetic provenance, daily cadence, explicit window size, reference label and insufficient-data mapping; complete effective metric definitions preserve units, floors, directions, default/explicit weights and domains with participant precedence; invalid config fails without output."
+    },
+    {
+      "file": "cohort.test.cjs",
+      "exitCode": 0,
+      "output": "{\n  \"modelVersion\": \"routine-change/2.0.0\",\n  \"participants\": 4959,\n  \"records\": 43211,\n  \"scored\": 17596,\n  \"statuses\": {\n    \"baseline\": 13702,\n    \"collecting_window\": 3207,\n    \"no_change\": 15303,\n    \"change_detected\": 1972,\n    \"insufficient_data\": 8709,\n    \"review_suggested\": 318\n  },\n  \"synthetic\": [\n    {\n      \"id\": \"sim-01\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-02\",\n      \"latest\": \"review_suggested\",\n      \"score\": 66,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-03\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-04\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-05\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 49\n    },\n    {\n      \"id\": \"sim-06\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-07\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-08\",\n      \"latest\": \"review_suggested\",\n      \"score\": 65,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-09\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-10\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-11\",\n      \"latest\": \"no_change\",\n      \"score\": 27,\n      \"scored\": 86\n    }\n  ],\n  \"failures\": []\n}"
+    },
+    {
+      "file": "companion-signals.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: component-signal contract \u2014 3960 synthetic payloads validated; research participants receive none; identity/day mismatch, range, provenance and version rejection; fusion abstention, coverage gate and normalized weights; unobserved demo days unscored; selected reference respected; required day keys incl. monthly periods."
+    },
+    {
+      "file": "engine-adaptive.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: adaptation excludes current window/future observations, freezes adverse shifts and confirmed context, preserves anchor, context provenance/downweighting, directional recovery/improvement, explicit low-evidence baseline and reference-end boundary.\nPASS: confirmed context never downgrades unadjusted change status; neutral defaults and ordinal index compatibility.\nPASS: one illness day in seven only attenuates eligible features by overlap; intentional activity context never suppresses mood."
+    },
+    {
+      "file": "engine-adversarial.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: adversarial inputs, stale-feature regression, prototype-safe keys, 400 seeded property trials (unit invariance, no future leakage, outcome independence, missingness, immutability), monotonic adverse movement. Seed 0x713A2.\nPASS: configured physical-domain bounds reject invalid samples and invalid definitions."
+    },
+    {
+      "file": "engine-alerting.test.cjs",
+      "exitCode": 0,
+      "output": "Stable-series false-flag rate: 0/400 0%; MK nonsignificant noise: 387/400\nPASS daily alerting: isolated/sustained/watch/drift, missingness, two domains, contexts, capped adaptation, 50 prefixes, immutable inputs, converted units, known trend statistics, validated defaults and legacy status mapping. Slow-drift first index: 152\nPASS nested alert config validation and effective exported parameters.\nPASS sparse indexed-calendar persistence abstention."
+    },
+    {
+      "file": "engine.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: 14 checks covering stability, deterioration, missingness, coverage, direction, outlier resistance, future leakage, config validation and input immutability.\nPASS: period-gap and absent-current-observation abstention."
+    },
+    {
+      "file": "insights.test.cjs",
+      "exitCode": 0,
+      "output": "PASS personal explanations: exact ratios, percentage points, mood-scale differences, missingness, zero references, no inferred stress, date cadence and bedtime rollover.\nPASS noteworthy display: tinychanges suppressed; absolute+relative gates, large improvements, single-day changes, missingness, zero reference, custom rules, full-data retention and immutable policy."
+    },
+    {
+      "file": "location-explorer.test.cjs",
+      "exitCode": 0,
+      "output": "PASS GPS explorer: all50traces,3105points, singleton visibility, gap filter, no-match state and source-preserving export."
+    },
+    {
+      "file": "map.test.cjs",
+      "exitCode": 0,
+      "output": "Map regression suite passed: geometry gaps, trip segmentation, direction, reference selection, persistent updates, empty days, missing days, provenance escaping, offline policy and tile recovery.\nPASS linked GPS guard: person, subject, selected day, day key and timezone mismatches reject routes; contaminated references are excluded; recovery clears stale geometry.\nPASS regional offline context: Helsinki/Hanover bounds checked independently; no false coverage between distant regions.\nPASS recorded GPS inspection: timestamps/accuracy retained, stationary fixes distinct, old point overlays cleared.\nPASS map terminology: genuine GPS dots/sample links are not labelled verified walks or two-route comparisons.\nPASS responsive map: resized viewport fits the selected day; ordinary updates preserve manual view."
+    },
+    {
+      "file": "presentation.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: presentation \u2014 gauge/status/care tone agree with engine; engine persistence/drift; timeline signals, alert band, phases and shading; story strip; tour selection API; single-day noted and recovery states; analysis cache invalidation; companion panel and export provenance for demo vs research participants; demo-only actions; pebble picker and calm search."
+    },
+    {
+      "file": "studentlife-ui.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: StudentLife genuine daily UI, raw-code abstention, same-person GPS/check-ins, export identity, rejected-location redaction and missing diary days."
+    },
+    {
+      "file": "test-ui.cjs",
+      "exitCode": 0,
+      "output": "UI interactions/export/playback/XSS/short-history tests passed; render cases: 351"
+    },
+    {
+      "file": "test_story_outcomes.cjs",
+      "exitCode": 0,
+      "output": "PASS: 11 preserved/authored stories; sustained Noah/Jonas, noted Sofia, slow-drift Mila, stable Mara/Ada, recovery Lea/Emil, and bounded outputs"
+    },
+    {
+      "file": "ui-integration.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: 10907 stratified render combinations across 16 real/synthetic subjects, short histories, missing months, export provenance and playback controls."
+    },
+    {
+      "file": "ui-release.test.cjs",
+      "exitCode": 0,
+      "output": "PASS: release UI edge cases: denied storage, invalid/end dates, playback/focus, safe semantic fallback, single/null monthly histories, observed no-walk availability."
+    }
+  ],
+  "python": {
+    "exitCode": 0,
+    "output": "................................\n----------------------------------------------------------------------\nRan 32 tests in 22.483s\n\nOK",
+    "tests": 32
+  },
+  "protectedFiles": {
+    "companion-signals.js": true,
+    "data/studentlife-data.js": true,
+    "data/studentlife-data.json": true,
+    ".tmp/all-records/demo-data.json": true
+  },
+  "completedAt": "2026-11-14T16:31:53.841037+00:00",
+  "passed": true
+}

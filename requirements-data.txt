@@ -1,0 +1,6 @@
+# Optional source conversion only; viewing and tests require none of these.
+# Versions used in the original preprocessing environment.
+numpy==2.3.5
+pandas==3.0.1
+pyarrow==26.0.1
+pyreadr==0.5.3

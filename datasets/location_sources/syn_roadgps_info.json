@@ -1,0 +1,46 @@
+{
+  "_id": "69f7529592aaaafc6ee128c8",
+  "id": "Smile1120/SYN-RoadGps",
+  "author": "Smile1120",
+  "sha": "482d9f29bbee8282626e5136f16924366bcf5f6e",
+  "lastModified": "2026-05-07T05:39:16.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "license:cc-by-4.0",
+    "size_categories:10K<n<100K",
+    "format:csv",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "region:us"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tSYN-RoadGPS\n\t\n\nSYN-RoadGPS is a road network-constrained synthetic GPS trajectory dataset for trajectory modeling and evaluation.\nThe dataset contains synthetic trajectories represented by road segment identifiers, timestamps, within-segment position ratios, and reconstructed GPS coordinates.\nThe raw source GPS trajectory records are not publicly released due to privacy and access restrictions. The released data are synthetic and are intended for research on synthetic trajectory\u2026 See the full description on the dataset page: https://huggingface.co/datasets/Smile1120/SYN-RoadGps.",
+  "downloads": 13,
+  "likes": 0,
+  "cardData": {
+    "license": "cc-by-4.0"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "RoadGPS.csv"
+    },
+    {
+      "rfilename": "roadmap.geo"
+    },
+    {
+      "rfilename": "roadmap.rel"
+    }
+  ],
+  "createdAt": "2026-05-03T13:50:13.000Z",
+  "usedStorage": 0
+}

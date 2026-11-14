@@ -1,0 +1,38 @@
+[
+  {
+    "type": "file",
+    "oid": "9f956b52b268c0d990109ffdde125182df660d7a",
+    "size": 2552,
+    "path": ".gitattributes"
+  },
+  {
+    "type": "file",
+    "oid": "794272a9e5918328e8f6858bfa1a86ac5f46e5e4",
+    "size": 759,
+    "path": "README.md"
+  },
+  {
+    "type": "file",
+    "oid": "9ee9eab3f1b6de6252b5753c0987f7c59aff9b15",
+    "size": 52805221,
+    "lfs": {
+      "oid": "66e504de9fcbef38c7302ff3b0bc7ac7040ab6fbb91823d88fcbd5a05c27710e",
+      "size": 52805221,
+      "pointerSize": 133
+    },
+    "xetHash": "bcbe1b7bd63c9e9a1cffa19d6cde532b461dde308d3fd40921ca8ddedf58d965",
+    "path": "RoadGPS.csv"
+  },
+  {
+    "type": "file",
+    "oid": "543ec31ff903643478e22134462b6f27f288a492",
+    "size": 7327374,
+    "path": "roadmap.geo"
+  },
+  {
+    "type": "file",
+    "oid": "971501d6603f992d854406c3ca33f178f8058df2",
+    "size": 3036045,
+    "path": "roadmap.rel"
+  }
+]

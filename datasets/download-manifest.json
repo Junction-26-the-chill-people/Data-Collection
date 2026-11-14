@@ -1,0 +1,171 @@
+{
+  "downloaded_on": "2026-11-14",
+  "files": [
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "README.md",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/README.md",
+      "size": 4588,
+      "algorithm": "git-sha1",
+      "expected": "c5d6e4a1dd307718f99f43e846149f8b19c1d901",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "9b55a38a3f10f8a4f7d7c45b78ada81fb25b41d27183dd44f06e06e3fb6fb7c9",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\README.md"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": ".gitattributes",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/.gitattributes",
+      "size": 2461,
+      "algorithm": "git-sha1",
+      "expected": "1ef325f1b111266a6b26e0196871bd78baa8c2f3",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "e7a120ab07b1bc5b486be249e9fc6c83d59448d0093e1dfebe95d1566d9cafc0",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\.gitattributes"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "df_dict_healthdb_distance.pkl",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/df_dict_healthdb_distance.pkl",
+      "size": 49933,
+      "algorithm": "sha256",
+      "expected": "31eb4ff0cb4212e23a70c83a11b73bb5c41a174f5312a9233c75ad360aa6c3ee",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "31eb4ff0cb4212e23a70c83a11b73bb5c41a174f5312a9233c75ad360aa6c3ee",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\df_dict_healthdb_distance.pkl"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "df_dict_healthdb_floors.pkl",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/df_dict_healthdb_floors.pkl",
+      "size": 24850,
+      "algorithm": "sha256",
+      "expected": "c1aaf2dd59ad1530f2f3e166e7c7fddcfc43e329a1114e4d9242745d8295fe30",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "c1aaf2dd59ad1530f2f3e166e7c7fddcfc43e329a1114e4d9242745d8295fe30",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\df_dict_healthdb_floors.pkl"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "df_dict_Cache.pkl",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/df_dict_Cache.pkl",
+      "size": 815086,
+      "algorithm": "sha256",
+      "expected": "874279a637e40c0b04a3609715547b8e63814c119ec0e522e7e469e2ce934f3a",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "874279a637e40c0b04a3609715547b8e63814c119ec0e522e7e469e2ce934f3a",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\df_dict_Cache.pkl"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "df_dict_healthdb_steps.pkl",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/df_dict_healthdb_steps.pkl",
+      "size": 50513,
+      "algorithm": "sha256",
+      "expected": "09ab529fac10fd410c427d30d6a173f0f54f21f7f6070138756b2c3624e8874b",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "09ab529fac10fd410c427d30d6a173f0f54f21f7f6070138756b2c3624e8874b",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\df_dict_healthdb_steps.pkl"
+    },
+    {
+      "dataset": "psyche_d",
+      "filename": "LICENSE.pdf",
+      "url": "https://zenodo.org/api/records/5085146/files/LICENSE.pdf/content",
+      "size": 85361,
+      "algorithm": "md5",
+      "expected": "d739a00cc8259453dcd253ffa4ba5f8d",
+      "revision": "5085146",
+      "status": "verified",
+      "sha256": "9cb1008e4a55d9aeece0fcc79456e7a3cf4f6dc32e1452b57c925d7918942434",
+      "local_path": "E:\\Junction26\\datasets\\psyche_d\\raw\\LICENSE.pdf"
+    },
+    {
+      "dataset": "psyche_d",
+      "filename": "Feature explanations - anonymized data - Sheet1.tsv",
+      "url": "https://zenodo.org/api/records/5085146/files/Feature%20explanations%20-%20anonymized%20data%20-%20Sheet1.tsv/content",
+      "size": 10919,
+      "algorithm": "md5",
+      "expected": "2dfadab7595b972b9102fbf7903bb27a",
+      "revision": "5085146",
+      "status": "verified",
+      "sha256": "e346b57eb81c8c7d22a6ff0bda71214e527d8bed72eef1c2218d7e5826612e3e",
+      "local_path": "E:\\Junction26\\datasets\\psyche_d\\raw\\Feature explanations - anonymized data - Sheet1.tsv"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "df_dict_motionstate.pkl",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/df_dict_motionstate.pkl",
+      "size": 1911252,
+      "algorithm": "sha256",
+      "expected": "2297ce01f4afbfae9b7b34173bbd602a68191390c72582ef462b2b4d7008ae5d",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "2297ce01f4afbfae9b7b34173bbd602a68191390c72582ef462b2b4d7008ae5d",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\df_dict_motionstate.pkl"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "df_dict_natalie.pkl",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/df_dict_natalie.pkl",
+      "size": 1732690,
+      "algorithm": "sha256",
+      "expected": "5e6f85074b9dc27b54ff67dfdcec215376da3ea978ffff48a7cd1a6d09bf2c5a",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "5e6f85074b9dc27b54ff67dfdcec215376da3ea978ffff48a7cd1a6d09bf2c5a",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\df_dict_natalie.pkl"
+    },
+    {
+      "dataset": "nfi_fared_digital_traces",
+      "filename": "df_dict_stepcounthistory.pkl",
+      "url": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces/resolve/5d528bd3fe38bc33067015496045ed1f155f005c/df_dict_stepcounthistory.pkl",
+      "size": 7645452,
+      "algorithm": "sha256",
+      "expected": "facf30181f33174482ee6767d465032713398eeab48c246905a672f9786778a7",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "status": "verified",
+      "sha256": "facf30181f33174482ee6767d465032713398eeab48c246905a672f9786778a7",
+      "local_path": "E:\\Junction26\\datasets\\nfi_fared_digital_traces\\raw\\df_dict_stepcounthistory.pkl"
+    },
+    {
+      "dataset": "finnish_immigrants",
+      "filename": "Loneliness_Dataset_Nov10.zip",
+      "url": "https://datadryad.org/api/v2/files/4482019/download",
+      "size": 1860841444,
+      "algorithm": "sha256",
+      "expected": "4907cf90a1502381419bfd286f58c0c865db254d671c382aeb908bbe7f18d82c",
+      "revision": "410377",
+      "status": "failed",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "dataset": "finnish_immigrants",
+      "filename": "README.md",
+      "url": "https://datadryad.org/api/v2/files/4482020/download",
+      "size": 29750,
+      "algorithm": "sha256",
+      "expected": "63048b60625b4e8ddf0fa97bd94ce4e52626c5a859a086658baae08b62bffe97",
+      "revision": "410377",
+      "status": "failed",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "dataset": "psyche_d",
+      "filename": "anon_processed_df_parquet",
+      "url": "https://zenodo.org/api/records/5085146/files/anon_processed_df_parquet/content",
+      "size": 21310927,
+      "algorithm": "md5",
+      "expected": "a6b21ffbb5fba0600ed494c6ab299cc4",
+      "revision": "5085146",
+      "status": "verified",
+      "sha256": "4bf1d7622d947f5bb62067c91789e1ef5de0411f439a772b8a7941282cc1cd78",
+      "local_path": "E:\\Junction26\\datasets\\psyche_d\\raw\\anon_processed_df_parquet"
+    }
+  ]
+}

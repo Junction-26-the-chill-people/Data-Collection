@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://datadryad.org/downloads/file_stream/4482019",
+    "status": 403
+  },
+  {
+    "url": "https://datadryad.org/api/v2/files/4482019/download",
+    "status": 401
+  }
+]

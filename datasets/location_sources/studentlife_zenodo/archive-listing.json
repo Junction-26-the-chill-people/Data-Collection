@@ -1,0 +1,277 @@
+{
+  "url": "https://zenodo.org/api/records/3529253/files/dataset_rds.zip/content",
+  "archiveBytes": 230469489,
+  "method": "HTTP Range central directory only; no R object loaded; no full archive downloaded",
+  "entries": [
+    {
+      "name": "dataset_rds/EMA/",
+      "compressedBytes": 0,
+      "uncompressedBytes": 0
+    },
+    {
+      "name": "dataset_rds/EMA/Activity.Rds",
+      "compressedBytes": 6693,
+      "uncompressedBytes": 6713
+    },
+    {
+      "name": "dataset_rds/EMA/Administration's response.Rds",
+      "compressedBytes": 1701,
+      "uncompressedBytes": 1701
+    },
+    {
+      "name": "dataset_rds/EMA/Behavior.Rds",
+      "compressedBytes": 5750,
+      "uncompressedBytes": 5750
+    },
+    {
+      "name": "dataset_rds/EMA/Boston Bombing.Rds",
+      "compressedBytes": 885,
+      "uncompressedBytes": 887
+    },
+    {
+      "name": "dataset_rds/EMA/Cancelled Classes.Rds",
+      "compressedBytes": 1840,
+      "uncompressedBytes": 1840
+    },
+    {
+      "name": "dataset_rds/EMA/Class 2.Rds",
+      "compressedBytes": 2464,
+      "uncompressedBytes": 2464
+    },
+    {
+      "name": "dataset_rds/EMA/Class.Rds",
+      "compressedBytes": 6350,
+      "uncompressedBytes": 6350
+    },
+    {
+      "name": "dataset_rds/EMA/Comment.Rds",
+      "compressedBytes": 4434,
+      "uncompressedBytes": 4434
+    },
+    {
+      "name": "dataset_rds/EMA/Dartmouth now.Rds",
+      "compressedBytes": 1444,
+      "uncompressedBytes": 1444
+    },
+    {
+      "name": "dataset_rds/EMA/Dimensions protestors.Rds",
+      "compressedBytes": 1388,
+      "uncompressedBytes": 1388
+    },
+    {
+      "name": "dataset_rds/EMA/Dimensions.Rds",
+      "compressedBytes": 1549,
+      "uncompressedBytes": 1549
+    },
+    {
+      "name": "dataset_rds/EMA/Dining Halls.Rds",
+      "compressedBytes": 4467,
+      "uncompressedBytes": 4467
+    },
+    {
+      "name": "dataset_rds/EMA/Do Campbell's jokes suck_.Rds",
+      "compressedBytes": 1918,
+      "uncompressedBytes": 1918
+    },
+    {
+      "name": "dataset_rds/EMA/Events.Rds",
+      "compressedBytes": 7776,
+      "uncompressedBytes": 7776
+    },
+    {
+      "name": "dataset_rds/EMA/Exercise.Rds",
+      "compressedBytes": 5386,
+      "uncompressedBytes": 5410
+    },
+    {
+      "name": "dataset_rds/EMA/Green Key 1.Rds",
+      "compressedBytes": 963,
+      "uncompressedBytes": 963
+    },
+    {
+      "name": "dataset_rds/EMA/Green Key 2.Rds",
+      "compressedBytes": 700,
+      "uncompressedBytes": 700
+    },
+    {
+      "name": "dataset_rds/EMA/Lab.Rds",
+      "compressedBytes": 3075,
+      "uncompressedBytes": 3075
+    },
+    {
+      "name": "dataset_rds/EMA/Mood 1.Rds",
+      "compressedBytes": 4849,
+      "uncompressedBytes": 4849
+    },
+    {
+      "name": "dataset_rds/EMA/Mood 2.Rds",
+      "compressedBytes": 2947,
+      "uncompressedBytes": 2947
+    },
+    {
+      "name": "dataset_rds/EMA/Mood.Rds",
+      "compressedBytes": 5578,
+      "uncompressedBytes": 5578
+    },
+    {
+      "name": "dataset_rds/EMA/PAM.Rds",
+      "compressedBytes": 45050,
+      "uncompressedBytes": 45675
+    },
+    {
+      "name": "dataset_rds/EMA/QR_Code.Rds",
+      "compressedBytes": 4592,
+      "uncompressedBytes": 4592
+    },
+    {
+      "name": "dataset_rds/EMA/Sleep.Rds",
+      "compressedBytes": 23955,
+      "uncompressedBytes": 24056
+    },
+    {
+      "name": "dataset_rds/EMA/Social.Rds",
+      "compressedBytes": 7161,
+      "uncompressedBytes": 7161
+    },
+    {
+      "name": "dataset_rds/EMA/Stress.Rds",
+      "compressedBytes": 9954,
+      "uncompressedBytes": 9955
+    },
+    {
+      "name": "dataset_rds/EMA/Study Spaces.Rds",
+      "compressedBytes": 7157,
+      "uncompressedBytes": 7157
+    },
+    {
+      "name": "dataset_rds/other/",
+      "compressedBytes": 0,
+      "uncompressedBytes": 0
+    },
+    {
+      "name": "dataset_rds/other/app_usage.Rds",
+      "compressedBytes": 9324764,
+      "uncompressedBytes": 10432492
+    },
+    {
+      "name": "dataset_rds/other/calendar.Rds",
+      "compressedBytes": 26724,
+      "uncompressedBytes": 27616
+    },
+    {
+      "name": "dataset_rds/other/call_log.Rds",
+      "compressedBytes": 1975800,
+      "uncompressedBytes": 2001360
+    },
+    {
+      "name": "dataset_rds/other/dining.Rds",
+      "compressedBytes": 40601,
+      "uncompressedBytes": 40837
+    },
+    {
+      "name": "dataset_rds/other/sms.Rds",
+      "compressedBytes": 1853470,
+      "uncompressedBytes": 1871462
+    },
+    {
+      "name": "dataset_rds/sensing/",
+      "compressedBytes": 0,
+      "uncompressedBytes": 0
+    },
+    {
+      "name": "dataset_rds/sensing/activity.Rds",
+      "compressedBytes": 42820210,
+      "uncompressedBytes": 63289850
+    },
+    {
+      "name": "dataset_rds/sensing/audio.Rds",
+      "compressedBytes": 111982804,
+      "uncompressedBytes": 265568501
+    },
+    {
+      "name": "dataset_rds/sensing/bluetooth.Rds",
+      "compressedBytes": 3880771,
+      "uncompressedBytes": 3971630
+    },
+    {
+      "name": "dataset_rds/sensing/conversation.Rds",
+      "compressedBytes": 584000,
+      "uncompressedBytes": 587078
+    },
+    {
+      "name": "dataset_rds/sensing/dark.Rds",
+      "compressedBytes": 57188,
+      "uncompressedBytes": 57426
+    },
+    {
+      "name": "dataset_rds/sensing/gps.Rds",
+      "compressedBytes": 2965100,
+      "uncompressedBytes": 3035790
+    },
+    {
+      "name": "dataset_rds/sensing/phonecharge.Rds",
+      "compressedBytes": 26551,
+      "uncompressedBytes": 26673
+    },
+    {
+      "name": "dataset_rds/sensing/phonelock.Rds",
+      "compressedBytes": 72565,
+      "uncompressedBytes": 72981
+    },
+    {
+      "name": "dataset_rds/sensing/wifi.Rds",
+      "compressedBytes": 49496643,
+      "uncompressedBytes": 50599772
+    },
+    {
+      "name": "dataset_rds/sensing/wifi_location.Rds",
+      "compressedBytes": 5167379,
+      "uncompressedBytes": 5878493
+    },
+    {
+      "name": "dataset_rds/survey/",
+      "compressedBytes": 0,
+      "uncompressedBytes": 0
+    },
+    {
+      "name": "dataset_rds/survey/BigFive.Rds",
+      "compressedBytes": 3858,
+      "uncompressedBytes": 3872
+    },
+    {
+      "name": "dataset_rds/survey/FlourishingScale.Rds",
+      "compressedBytes": 1256,
+      "uncompressedBytes": 1256
+    },
+    {
+      "name": "dataset_rds/survey/LonelinessScale.Rds",
+      "compressedBytes": 1883,
+      "uncompressedBytes": 1883
+    },
+    {
+      "name": "dataset_rds/survey/panas.Rds",
+      "compressedBytes": 1594,
+      "uncompressedBytes": 1594
+    },
+    {
+      "name": "dataset_rds/survey/PerceivedStressScale.Rds",
+      "compressedBytes": 1477,
+      "uncompressedBytes": 1495
+    },
+    {
+      "name": "dataset_rds/survey/PHQ-9.Rds",
+      "compressedBytes": 1456,
+      "uncompressedBytes": 1456
+    },
+    {
+      "name": "dataset_rds/survey/psqi.Rds",
+      "compressedBytes": 4045,
+      "uncompressedBytes": 4045
+    },
+    {
+      "name": "dataset_rds/survey/vr_12.Rds",
+      "compressedBytes": 1994,
+      "uncompressedBytes": 1994
+    }
+  ]
+}

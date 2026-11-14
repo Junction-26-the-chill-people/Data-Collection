@@ -1,0 +1,72 @@
+[
+  {
+    "file": "df_dict_healthdb_distance.pkl",
+    "bytes": 49933,
+    "opcode_count": 5329,
+    "declared_rangeindex_stops": [
+      876
+    ],
+    "gps_field_candidates": [],
+    "interpretation": "Static opcode inspection only; declared index stops are not validated dataframe row counts."
+  },
+  {
+    "file": "df_dict_Cache.pkl",
+    "bytes": 815086,
+    "opcode_count": 79795,
+    "declared_rangeindex_stops": [
+      9832
+    ],
+    "gps_field_candidates": [],
+    "interpretation": "Static opcode inspection only; declared index stops are not validated dataframe row counts."
+  },
+  {
+    "file": "df_dict_healthdb_floors.pkl",
+    "bytes": 24850,
+    "opcode_count": 2943,
+    "declared_rangeindex_stops": [
+      410
+    ],
+    "gps_field_candidates": [],
+    "interpretation": "Static opcode inspection only; declared index stops are not validated dataframe row counts."
+  },
+  {
+    "file": "df_dict_healthdb_steps.pkl",
+    "bytes": 50513,
+    "opcode_count": 5384,
+    "declared_rangeindex_stops": [
+      887
+    ],
+    "gps_field_candidates": [],
+    "interpretation": "Static opcode inspection only; declared index stops are not validated dataframe row counts."
+  },
+  {
+    "file": "df_dict_motionstate.pkl",
+    "bytes": 1911252,
+    "opcode_count": 103234,
+    "declared_rangeindex_stops": [
+      17007
+    ],
+    "gps_field_candidates": [],
+    "interpretation": "Static opcode inspection only; declared index stops are not validated dataframe row counts."
+  },
+  {
+    "file": "df_dict_natalie.pkl",
+    "bytes": 1732690,
+    "opcode_count": 141346,
+    "declared_rangeindex_stops": [
+      23338
+    ],
+    "gps_field_candidates": [],
+    "interpretation": "Static opcode inspection only; declared index stops are not validated dataframe row counts."
+  },
+  {
+    "file": "df_dict_stepcounthistory.pkl",
+    "bytes": 7645452,
+    "opcode_count": 354458,
+    "declared_rangeindex_stops": [
+      58771
+    ],
+    "gps_field_candidates": [],
+    "interpretation": "Static opcode inspection only; declared index stops are not validated dataframe row counts."
+  }
+]

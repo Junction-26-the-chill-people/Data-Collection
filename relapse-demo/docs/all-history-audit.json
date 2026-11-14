@@ -1,0 +1,185 @@
+{
+  "scope": "4948 numeric participant IDs with source histories retained, sorted numerically; no selection by worsening labels or model score. Descriptive sample, not validation cohort. All source rows are also inspected for ranges and missingness.",
+  "sourceSha256": "4bf1d7622d947f5bb62067c91789e1ef5de0411f439a772b8a7941282cc1cd78",
+  "sourceRows": 35694,
+  "sourceParticipants": 4948,
+  "auditedParticipants": 4948,
+  "excludedParticipants": 0,
+  "participantsWithFewerThanThreeObservedRecords": 928,
+  "observedRecords": 35694,
+  "explicitMissingSlots": 6197,
+  "exactMappedValuesChecked": 210501,
+  "metrics": {
+    "steps": {
+      "sourceColumn": "steps_awake_mean",
+      "sourceDefinition": "Mean number of steps taken while awake",
+      "sourceNotes": "",
+      "transformationFactor": 1,
+      "missing": 20,
+      "zero": 0,
+      "min": 49.285714285714285,
+      "max": 52048.92857142857,
+      "outsideLogicalBounds": 0,
+      "infinite": 0
+    },
+    "sleep_hours": {
+      "sourceColumn": "sleep_asleep_mean_recent",
+      "sourceDefinition": "Mean number of minutes asleep per night, last 4 days",
+      "sourceNotes": "",
+      "transformationFactor": 0.016666666666666666,
+      "missing": 583,
+      "zero": 1922,
+      "min": 0.0,
+      "max": 20.0,
+      "outsideLogicalBounds": 0,
+      "infinite": 0
+    },
+    "sleep_efficiency": {
+      "sourceColumn": "sleep_ratio_asleep_in_bed_weekday_mean",
+      "sourceDefinition": "Mean ratio between number of minutes asleep / in bed on weekdays",
+      "sourceNotes": "",
+      "transformationFactor": 100,
+      "missing": 1571,
+      "zero": 0,
+      "min": 8.860759493670885,
+      "max": 100.0,
+      "outsideLogicalBounds": 0,
+      "infinite": 0
+    },
+    "bedtime_hour": {
+      "sourceColumn": "sleep_main_start_hour_adj_median",
+      "sourceDefinition": "Median start hour of main sleep",
+      "sourceNotes": "0-30+ (adjusted so that 4am next day = 28)",
+      "transformationFactor": 1,
+      "missing": 1489,
+      "zero": 0,
+      "min": 12.0,
+      "max": 35.0,
+      "outsideLogicalBounds": 0,
+      "infinite": 0
+    },
+    "short_sleep_nights": {
+      "sourceColumn": "sleep__hyposomnia_count_",
+      "sourceDefinition": "Number of nights with <5 hours asleep, last 7 days",
+      "sourceNotes": "",
+      "transformationFactor": 1,
+      "missing": 0,
+      "zero": 15197,
+      "min": 0.0,
+      "max": 7.0,
+      "outsideLogicalBounds": 0,
+      "infinite": 0
+    },
+    "active_days": {
+      "sourceColumn": "steps__active_day_count_",
+      "sourceDefinition": "Number of days with >10k steps, last 7 days",
+      "sourceNotes": "",
+      "transformationFactor": 1,
+      "missing": 0,
+      "zero": 13237,
+      "min": 0.0,
+      "max": 7.0,
+      "outsideLogicalBounds": 0,
+      "infinite": 0
+    }
+  },
+  "baselineQuality": {
+    "steps": {
+      "eligibleReferenceSets": 4008,
+      "floorDominated": 2735,
+      "referenceContainsZero": 0,
+      "constantReference": 0
+    },
+    "sleep_hours": {
+      "eligibleReferenceSets": 3851,
+      "floorDominated": 2583,
+      "referenceContainsZero": 344,
+      "constantReference": 96
+    },
+    "sleep_efficiency": {
+      "eligibleReferenceSets": 3730,
+      "floorDominated": 3627,
+      "referenceContainsZero": 0,
+      "constantReference": 1
+    },
+    "bedtime_hour": {
+      "eligibleReferenceSets": 3739,
+      "floorDominated": 3298,
+      "referenceContainsZero": 0,
+      "constantReference": 798
+    },
+    "short_sleep_nights": {
+      "eligibleReferenceSets": 4020,
+      "floorDominated": 3067,
+      "referenceContainsZero": 2549,
+      "constantReference": 965
+    },
+    "active_days": {
+      "eligibleReferenceSets": 4020,
+      "floorDominated": 2806,
+      "referenceContainsZero": 2233,
+      "constantReference": 1026
+    }
+  },
+  "referenceEndpointContext": {
+    "participantsWithAnyReferenceEndpoint": 3662,
+    "participantsWithAnyReferenceEndpointAtLeast10": 1241,
+    "participantsWithNoReferenceEndpoint": 1286
+  },
+  "spearmanCorrelations": {
+    "steps": {
+      "steps": 1.0,
+      "sleep_hours": -0.0902,
+      "sleep_efficiency": 0.0489,
+      "bedtime_hour": -0.14,
+      "short_sleep_nights": 0.0114,
+      "active_days": 0.8838
+    },
+    "sleep_hours": {
+      "steps": -0.0902,
+      "sleep_hours": 1.0,
+      "sleep_efficiency": 0.3327,
+      "bedtime_hour": -0.1149,
+      "short_sleep_nights": -0.7828,
+      "active_days": -0.0581
+    },
+    "sleep_efficiency": {
+      "steps": 0.0489,
+      "sleep_hours": 0.3327,
+      "sleep_efficiency": 1.0,
+      "bedtime_hour": -0.0658,
+      "short_sleep_nights": -0.3558,
+      "active_days": 0.037
+    },
+    "bedtime_hour": {
+      "steps": -0.14,
+      "sleep_hours": -0.1149,
+      "sleep_efficiency": -0.0658,
+      "bedtime_hour": 1.0,
+      "short_sleep_nights": 0.1273,
+      "active_days": -0.1023
+    },
+    "short_sleep_nights": {
+      "steps": 0.0114,
+      "sleep_hours": -0.7828,
+      "sleep_efficiency": -0.3558,
+      "bedtime_hour": 0.1273,
+      "short_sleep_nights": 1.0,
+      "active_days": -0.0006
+    },
+    "active_days": {
+      "steps": 0.8838,
+      "sleep_hours": -0.0581,
+      "sleep_efficiency": 0.037,
+      "bedtime_hour": -0.1023,
+      "short_sleep_nights": -0.0006,
+      "active_days": 1.0
+    }
+  },
+  "cautions": [
+    "PHQ endpoint context is not contemporaneous daily mood or a validated baseline label.",
+    "Zero recorded sleep can reflect measurement or preprocessing artifacts; absence of sleep is not established.",
+    "No clinical prediction/accuracy is measured by this audit.",
+    "Eligibility selects longer observed histories and cannot generalize to short-history or poorly monitored users."
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "workspace": "E:/Junction26",
+  "download_date": "2026-11-14",
+  "datasets": [
+    {
+      "id": "nfi_fared_digital_traces",
+      "status": "downloaded_verified",
+      "source": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_Digital_Traces",
+      "revision": "5d528bd3fe38bc33067015496045ed1f155f005c",
+      "raw_directory": "nfi_fared_digital_traces/raw",
+      "files": 9,
+      "license": "No license identifier/file found in repository metadata or dataset card; confirm reuse terms before redistribution/commercial use.",
+      "use": "Activity/phone-motion traces; not a depression-labeled dataset.",
+      "handling": "Pickle files saved verbatim; not deserialized or executed."
+    },
+    {
+      "id": "psyche_d",
+      "status": "downloaded_verified",
+      "source": "https://zenodo.org/records/5085146",
+      "version": "0.1",
+      "raw_directory": "psyche_d/raw",
+      "files": 3,
+      "license": "CC BY-NC 4.0; publisher LICENSE.pdf retained.",
+      "use": "Derived wearable/behavioral features and PHQ-9-related longitudinal outcomes; not raw smartwatch streams."
+    },
+    {
+      "id": "finnish_immigrants",
+      "status": "blocked_download",
+      "source": "https://datadryad.org/dataset/doi:10.5061/dryad.qz612jmrn",
+      "version_id": "410377",
+      "published": "2025-11-28",
+      "raw_directory": "finnish_immigrants/raw",
+      "expected_files": 2,
+      "expected_bytes": 1860871194,
+      "license": "CC0-1.0 according to Dryad API metadata.",
+      "use": "Multimodal wearable, phone-behavior and survey study; shifted dates, GPS excluded.",
+      "blocker": "Public website file links return HTTP 403; API download links require bearer authentication (401). Browser download attempt timed out.",
+      "files": [
+        {
+          "name": "Loneliness_Dataset_Nov10.zip",
+          "bytes": 1860841444,
+          "sha256": "4907cf90a1502381419bfd286f58c0c865db254d671c382aeb908bbe7f18d82c",
+          "public_download": "https://datadryad.org/downloads/file_stream/4482019"
+        },
+        {
+          "name": "README.md",
+          "bytes": 29750,
+          "sha256": "63048b60625b4e8ddf0fa97bd94ce4e52626c5a859a086658baae08b62bffe97",
+          "public_download": "https://datadryad.org/downloads/file_stream/4482020"
+        }
+      ]
+    },
+    {
+      "id": "syn_roadgps",
+      "status": "downloaded_verified",
+      "source": "https://huggingface.co/datasets/Smile1120/SYN-RoadGps",
+      "revision": "482d9f29bbee8282626e5136f16924366bcf5f6e",
+      "raw_directory": "location_sources/syn_roadgps/raw",
+      "files": 5,
+      "bytes": 63171951,
+      "license": "CC BY 4.0 according to pinned publisher dataset card.",
+      "synthetic": true,
+      "manifest": "location_sources/syn_roadgps_download_manifest.json",
+      "audit": "../relapse-demo/docs/location-dataset-audit.json",
+      "use": "Separate synthetic mobility/coordinate explorer; 10,000 trajectories and 546,273 points, no same-person clinical linkage.",
+      "limitations": [
+        "Coordinate datum unspecified; do not promise actual street alignment.",
+        "606 edges across 195 trajectories imply speed above 55 m/s; derived viewer splits these edges without removing source points.",
+        "Trace road IDs do not reliably join supplied roadmap geometry IDs.",
+        "No mood, physiology, travel-mode, home labels or longitudinal person identities."
+      ],
+      "handling": "CSV and text metadata safely parsed; no repository code or object deserialization executed. Originals and publisher checksums retained."
+    },
+    {
+      "id": "corona_health",
+      "status": "partial_download_verified",
+      "source": "https://b2share.eudat.eu/records/cgf63-kme28",
+      "doi": "10.23728/b2share.cgf63-kme28",
+      "version": "v2",
+      "record_revision": 4,
+      "published": "2026-02-05",
+      "raw_directory": "location_sources/corona_health/raw",
+      "files": 4,
+      "bytes": 3801848,
+      "available_repository_files": 7,
+      "available_repository_bytes": 28784937,
+      "downloaded_files": [
+        "GPS_Baseline.csv",
+        "GPS_EMA.csv",
+        "Baseline.csv",
+        "EMA.csv"
+      ],
+      "not_downloaded_files": [
+        "APP_Baseline.csv",
+        "APP_EMA.csv",
+        "Codebook_Baseline_EMA.xlsx"
+      ],
+      "license": "CC BY 4.0, verified in official repository API metadata.",
+      "synthetic": false,
+      "manifest": "location_sources/corona_health/download-manifest.json",
+      "metadata": "location_sources/corona_health/record.json",
+      "schema_audit": "location_sources/corona_health/schema-audit.json",
+      "linkage_audit": "location_sources/corona_health/linkage-audit.json",
+      "notes": "../relapse-demo/docs/location-followup.md",
+      "use": "Research-only bounded GPS/survey subset: same-study anonymous IDs and PHQ items; no integration into clinical demo or identity linking across studies.",
+      "limitations": [
+        "Coordinates are rounded to 0.1 degree and collected at survey submission, not continuous walks; unsuitable for street routes or home-dwell inference.",
+        "Missing and invalid coordinates and duplicate user/time keys require explicit handling.",
+        "No exact sensor/survey timestamp matches in raw strings; offsets mostly 60 or 120 minutes. Timezone explanation is unverified, no correction or temporal join applied.",
+        "App-use files and questionnaire codebook were not downloaded; this is not the full corpus."
+      ],
+      "handling": "Four plain CSV originals verified against publisher MD5 and local SHA256. No scores/classifications or inferred identity joins produced."
+    },
+    {
+      "id": "uci_gps",
+      "status": "archive_downloaded_not_integrated",
+      "source": "https://archive.ics.uci.edu/dataset/354/gps+trajectories",
+      "doi": "10.24432/C54S5Z",
+      "raw_directory": "location_sources/uci_gps/raw",
+      "license": "CC BY4.0 verified on official UCI page",
+      "archive_bytes": 220824,
+      "manifest": "location_sources/uci_gps/download-manifest.json",
+      "use": "GPS-only car/bus trajectory candidate; stopped before CSV extraction/UI integration after requirement changed to same-person GPS+health.",
+      "limitations": [
+        "No health outcomes; do not join to clinical study identities.",
+        "Official HTTPS endpoint certificate expired. Public official HTTP download used; local SHA256/ZIP CRC only, no publisher checksum/authenticated transport.",
+        "Only archive members inspected; actual CSV schema/counts not audited."
+      ]
+    },
+    {
+      "id": "studentlife_zenodo",
+      "status": "partial_members_verified_decoded",
+      "source": "https://zenodo.org/records/3529253",
+      "doi": "10.5281/zenodo.3529253",
+      "version": "1.0.0",
+      "license": "CC BY4.0 verified from official Zenodo API metadata for Daniel Fryer derivative",
+      "raw_directory": "location_sources/studentlife_zenodo/raw",
+      "files": 4,
+      "bytes": 3106977,
+      "manifest": "location_sources/studentlife_zenodo/member-manifest.json",
+      "metadata": "location_sources/studentlife_zenodo/record.json",
+      "decoded_directory": "location_sources/studentlife_zenodo/decoded",
+      "audit": "../relapse-demo/docs/studentlife-audit.json",
+      "notes": "../relapse-demo/docs/studentlife.md",
+      "use": "Actual same-UID GPS/PAM/sleep linkage,49sourceIDs,202877GPSpoints; UI raw health check-ins remain unscored.",
+      "limitations": [
+        "Only4ZIPmembers downloaded; publisher wholearchiveMD5 notverified; memberCRC/localSHA256 verified.",
+        "Source49GPSIDs differs from originalpaper48; actualIDs preserved.",
+        "UTCsubmission dates are an analysis convention; sleep retrospective; no home/transport inference.",
+        "No invented mood scale, PHQtotal, heartrate or stepcount."
+      ]
+    }
+  ],
+  "optional_candidates": [
+    {
+      "source": "https://huggingface.co/datasets/NetherlandsForensicInstitute/NFI_FARED_IMU",
+      "approx_bytes": 3736013337,
+      "status": "not_downloaded",
+      "reason": "Companion raw IMU data; larger and no depression labels, defer until needed."
+    }
+  ]
+}

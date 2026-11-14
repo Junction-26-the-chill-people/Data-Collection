@@ -1,0 +1,191 @@
+{
+  "interpretation": "Generated software scenarios; no clinical validation or real-patient outcome claims",
+  "modelVersion": "routine-change/2.0.0",
+  "results": {
+    "sim-01": {
+      "name": "Mara · steady rhythm",
+      "earlyMean": 0,
+      "lateMean": 0.04,
+      "peak": 1,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 89
+      },
+      "firstFlagIndex": null,
+      "latestState": "steady"
+    },
+    "sim-02": {
+      "name": "Noah · smaller days",
+      "earlyMean": 0.3333333333333333,
+      "lateMean": 67.36,
+      "peak": 73,
+      "latest": 66,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 31,
+        "noted": 2,
+        "watch": 7,
+        "flag_drift": 28,
+        "flag_sustained": 21
+      },
+      "firstFlagIndex": 71,
+      "latestState": "flag_sustained"
+    },
+    "sim-03": {
+      "name": "Lea · finding her rhythm again",
+      "earlyMean": 0,
+      "lateMean": 6.76,
+      "peak": 70,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 45,
+        "noted": 2,
+        "watch": 4,
+        "flag_sustained": 10,
+        "flag_drift": 28
+      },
+      "firstFlagIndex": 56,
+      "latestState": "steady"
+    },
+    "sim-04": {
+      "name": "Oskar · away from routine",
+      "earlyMean": 0,
+      "lateMean": 0,
+      "peak": 9,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 89
+      },
+      "firstFlagIndex": null,
+      "latestState": "steady"
+    },
+    "sim-05": {
+      "name": "Iris · gaps in the signal",
+      "earlyMean": 0,
+      "lateMean": 0.043478260869565216,
+      "peak": 1,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 42,
+        "steady": 50
+      },
+      "firstFlagIndex": null,
+      "latestState": "steady"
+    },
+    "sim-06": {
+      "name": "Emil · illness and recovery",
+      "earlyMean": 0,
+      "lateMean": 0,
+      "peak": 70,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 57,
+        "noted": 5,
+        "watch": 3,
+        "flag_drift": 21,
+        "flag_sustained": 3
+      },
+      "firstFlagIndex": 50,
+      "latestState": "steady"
+    },
+    "sim-07": {
+      "name": "Ada · a new fitness routine",
+      "earlyMean": 0.3333333333333333,
+      "lateMean": 0.88,
+      "peak": 2,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 89
+      },
+      "firstFlagIndex": null,
+      "latestState": "steady"
+    },
+    "sim-08": {
+      "name": "Jonas · restless nights",
+      "earlyMean": 0,
+      "lateMean": 65.72,
+      "peak": 73,
+      "latest": 65,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 44,
+        "noted": 2,
+        "watch": 4,
+        "flag_drift": 32,
+        "flag_sustained": 7
+      },
+      "firstFlagIndex": 81,
+      "latestState": "flag_sustained"
+    },
+    "sim-09": {
+      "name": "Sofia - one difficult day",
+      "earlyMean": 0,
+      "lateMean": 0,
+      "peak": 0,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 88,
+        "noted": 1
+      },
+      "firstFlagIndex": null,
+      "latestState": "steady"
+    },
+    "sim-10": {
+      "name": "Elias - different daily routes",
+      "earlyMean": 0,
+      "lateMean": 0,
+      "peak": 0,
+      "latest": 0,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 89
+      },
+      "firstFlagIndex": null,
+      "latestState": "steady"
+    },
+    "sim-11": {
+      "name": "Mila - a slow fade",
+      "earlyMean": 0,
+      "lateMean": 24.6,
+      "peak": 31,
+      "latest": 27,
+      "states": {
+        "baseline": 28,
+        "insufficient_data": 3,
+        "steady": 76,
+        "flag_drift": 13
+      },
+      "firstFlagIndex": 99,
+      "latestState": "steady",
+      "slowDrift": {
+        "seed": 20261125,
+        "firstDriftIndex": 99,
+        "firstDriftDay": 100,
+        "firstDriftDate": "2026-04-14",
+        "firstSustainedIndex": null,
+        "defaultIndex": 99,
+        "signalAtFirstDrift": 23,
+        "domains": [
+          "activity",
+          "mood"
+        ]
+      }
+    }
+  }
+}

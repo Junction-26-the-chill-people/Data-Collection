@@ -1,0 +1,208 @@
+{
+  "PAM": {
+    "rows": 9040,
+    "duplicateUidTimestampExtraRows": 107,
+    "duplicateUidTimestampGroups": 93,
+    "exactDuplicateExtraRows": 22,
+    "conflictingUidTimestampGroups": 81,
+    "fixtureResponseTimeCrossCheck": [
+      {
+        "fixtureUID": "u00",
+        "derivativeUID": "0",
+        "sourceJSONRows": 390,
+        "matchedRawResponseTimes": 390
+      },
+      {
+        "fixtureUID": "u01",
+        "derivativeUID": "1",
+        "sourceJSONRows": 140,
+        "matchedRawResponseTimes": 140
+      },
+      {
+        "fixtureUID": "u02",
+        "derivativeUID": "2",
+        "sourceJSONRows": 222,
+        "matchedRawResponseTimes": 222
+      }
+    ],
+    "defaultDayRecordCount": 21,
+    "defaultDayResponses": [
+      {
+        "picture_idx": "7.0",
+        "timestamp": "1364609269.0",
+        "UTC": "2013-03-30T02:07:49+00:00"
+      },
+      {
+        "picture_idx": "5.0",
+        "timestamp": "1364609268.0",
+        "UTC": "2013-03-30T02:07:48+00:00"
+      },
+      {
+        "picture_idx": "16.0",
+        "timestamp": "1364624699.0",
+        "UTC": "2013-03-30T06:24:59+00:00"
+      },
+      {
+        "picture_idx": "7.0",
+        "timestamp": "1364674277.0",
+        "UTC": "2013-03-30T20:11:17+00:00"
+      },
+      {
+        "picture_idx": "5.0",
+        "timestamp": "1364609268.0",
+        "UTC": "2013-03-30T02:07:48+00:00"
+      },
+      {
+        "picture_idx": "3.0",
+        "timestamp": "1364622412.0",
+        "UTC": "2013-03-30T05:46:52+00:00"
+      },
+      {
+        "picture_idx": "7.0",
+        "timestamp": "1364661438.0",
+        "UTC": "2013-03-30T16:37:18+00:00"
+      },
+      {
+        "picture_idx": "8.0",
+        "timestamp": "1364680911.0",
+        "UTC": "2013-03-30T22:01:51+00:00"
+      },
+      {
+        "picture_idx": "7.0",
+        "timestamp": "1364609269.0",
+        "UTC": "2013-03-30T02:07:49+00:00"
+      },
+      {
+        "picture_idx": "16.0",
+        "timestamp": "1364609264.0",
+        "UTC": "2013-03-30T02:07:44+00:00"
+      },
+      {
+        "picture_idx": "5.0",
+        "timestamp": "1364609267.0",
+        "UTC": "2013-03-30T02:07:47+00:00"
+      },
+      {
+        "picture_idx": "5.0",
+        "timestamp": "1364609266.0",
+        "UTC": "2013-03-30T02:07:46+00:00"
+      },
+      {
+        "picture_idx": "5.0",
+        "timestamp": "1364609266.0",
+        "UTC": "2013-03-30T02:07:46+00:00"
+      },
+      {
+        "picture_idx": "12.0",
+        "timestamp": "1364617682.0",
+        "UTC": "2013-03-30T04:28:02+00:00"
+      },
+      {
+        "picture_idx": "1.0",
+        "timestamp": "1364609264.0",
+        "UTC": "2013-03-30T02:07:44+00:00"
+      },
+      {
+        "picture_idx": "5.0",
+        "timestamp": "1364609262.0",
+        "UTC": "2013-03-30T02:07:42+00:00"
+      },
+      {
+        "picture_idx": "2.0",
+        "timestamp": "1364609263.0",
+        "UTC": "2013-03-30T02:07:43+00:00"
+      },
+      {
+        "picture_idx": "7.0",
+        "timestamp": "1364609265.0",
+        "UTC": "2013-03-30T02:07:45+00:00"
+      },
+      {
+        "picture_idx": "12.0",
+        "timestamp": "1364679819.0",
+        "UTC": "2013-03-30T21:43:39+00:00"
+      },
+      {
+        "picture_idx": "1.0",
+        "timestamp": "1364686491.0",
+        "UTC": "2013-03-30T23:34:51+00:00"
+      },
+      {
+        "picture_idx": "12.0",
+        "timestamp": "1364621427.0",
+        "UTC": "2013-03-30T05:30:27+00:00"
+      }
+    ]
+  },
+  "Sleep": {
+    "rows": 1644,
+    "duplicateUidTimestampExtraRows": 7,
+    "duplicateUidTimestampGroups": 7,
+    "exactDuplicateExtraRows": 6,
+    "conflictingUidTimestampGroups": 1,
+    "fixtureResponseTimeCrossCheck": [
+      {
+        "fixtureUID": "u00",
+        "derivativeUID": "0",
+        "sourceJSONRows": 63,
+        "matchedRawResponseTimes": 63
+      },
+      {
+        "fixtureUID": "u01",
+        "derivativeUID": "1",
+        "sourceJSONRows": 32,
+        "matchedRawResponseTimes": 32
+      },
+      {
+        "fixtureUID": "u02",
+        "derivativeUID": "2",
+        "sourceJSONRows": 31,
+        "matchedRawResponseTimes": 31
+      }
+    ],
+    "defaultDayRecordCount": 4,
+    "defaultDayResponses": [
+      {
+        "hour": "8.0",
+        "location": "43.70430713,-72.29029683",
+        "rate": "2.0",
+        "timestamp": "1364609263.0",
+        "social": "1.0",
+        "UTC": "2013-03-30T02:07:43+00:00"
+      },
+      {
+        "hour": "6.0",
+        "location": "43.70647211,-72.28802604",
+        "rate": "2.0",
+        "timestamp": "1364609267.0",
+        "social": "1.0",
+        "UTC": "2013-03-30T02:07:47+00:00"
+      },
+      {
+        "hour": "8.0",
+        "location": "43.70291316,-72.28943322",
+        "rate": "1.0",
+        "timestamp": "1364674277.0",
+        "social": "1.0",
+        "UTC": "2013-03-30T20:11:17+00:00"
+      },
+      {
+        "hour": "8.0",
+        "location": "43.70443854,-72.2860879",
+        "rate": "1.0",
+        "timestamp": "1364661437.0",
+        "social": "1.0",
+        "UTC": "2013-03-30T16:37:17+00:00"
+      }
+    ]
+  },
+  "sourceCodeEvidence": {
+    "url": "https://raw.githubusercontent.com/frycast/studentlife/master/R/SL_tbl_load.R",
+    "sha256": "1a3851c8e921210ec6365e486b8a5f42cbfce3f6f8e200234ae61f697c770348",
+    "function": "EMA_list_to_tibble",
+    "operation": "names(tab)[pmatch(\"resp_time\", names(tab))] <- \"timestamp\"",
+    "uidConstruction": "EMA_to_list iterates original participant path slots1..60 and assigns uid=i-1 before dropping missing files; original numeric identifier is preserved.",
+    "timestampConclusion": "Derivative preserves source resp_time. No independent validation of client response event versus later recording/upload/batching is available."
+  },
+  "handling": "All original rows retained, including exact duplicates and conflicts. No averaging, deduplication, night counting or inferred symptom changes."
+}

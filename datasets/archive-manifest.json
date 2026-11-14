@@ -1,0 +1,60 @@
+{
+  "archives": [
+    {
+      "archive": "datasets/archives/psyche-d-normalized.json.gz",
+      "target": "relapse-demo/.tmp/all-records/demo-data.json",
+      "bytes": 24726898,
+      "sha256": "199c7b6ffae0b6c9ccb87b83f5e53de5aa4a86fa59f9c01f14878c8dffa86081",
+      "archiveSha256": "563f57ba235d40c0e70a6413dbab230e888337c3c5e6645ec9a26812697750f4"
+    },
+    {
+      "archive": "datasets/archives/syn-roadgps-RoadGPS.csv.gz",
+      "target": "datasets/location_sources/syn_roadgps/raw/RoadGPS.csv",
+      "bytes": 52805221,
+      "sha256": "66e504de9fcbef38c7302ff3b0bc7ac7040ab6fbb91823d88fcbd5a05c27710e",
+      "archiveSha256": "d66bf0cef9d64d51bdc4a84782e5f3b353cfcbf8a336a23881b68bfc90947a81"
+    }
+  ],
+  "omittedOriginals": [
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/README.md",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/.gitattributes",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/df_dict_healthdb_distance.pkl",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/df_dict_Cache.pkl",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/df_dict_healthdb_floors.pkl",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/df_dict_healthdb_steps.pkl",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/df_dict_motionstate.pkl",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/df_dict_natalie.pkl",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/nfi_fared_digital_traces/raw/df_dict_stepcounthistory.pkl",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    },
+    {
+      "path": "datasets/location_sources/studentlife_tooling_sample/sample_dataset.tar.bz2",
+      "reason": "Original not redistributed: reuse terms not established for this file."
+    }
+  ]
+}

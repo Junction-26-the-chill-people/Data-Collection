@@ -1,0 +1,457 @@
+{
+  "version": "repository-data/1.0.0",
+  "release": "daily-linked/1.5.0",
+  "note": "Inventory of shipped files, distinct from original publisher download availability. Restored archive targets are checked by bootstrap.py. No clinical validation is implied.",
+  "files": [
+    {
+      "path": "datasets/archive-manifest.json",
+      "bytes": 2612,
+      "sha256": "3938d53b9bbaff2cc68de4e15e1a9b78f39de8265e6dc99799756cce3deb5586"
+    },
+    {
+      "path": "datasets/archives/psyche-d-normalized.json.gz",
+      "bytes": 946281,
+      "sha256": "563f57ba235d40c0e70a6413dbab230e888337c3c5e6645ec9a26812697750f4"
+    },
+    {
+      "path": "datasets/archives/syn-roadgps-RoadGPS.csv.gz",
+      "bytes": 13130611,
+      "sha256": "d66bf0cef9d64d51bdc4a84782e5f3b353cfcbf8a336a23881b68bfc90947a81"
+    },
+    {
+      "path": "datasets/dataset-registry.json",
+      "bytes": 8325,
+      "sha256": "a9b70986f3da67aabfed2b412f99788b41f42fa40c77ae9815926fb9ddddb468"
+    },
+    {
+      "path": "datasets/download-manifest.json",
+      "bytes": 8751,
+      "sha256": "40e4b4b8828379e938f9d9b67fba509ebd94b18d001f2e49d7628ee9c1dd7838"
+    },
+    {
+      "path": "datasets/dryad_files.json",
+      "bytes": 1489,
+      "sha256": "5c89edc9759edfbc35092f4db49a062b038290d243a73a02c60774074da60aa1"
+    },
+    {
+      "path": "datasets/dryad_metadata.json",
+      "bytes": 13040,
+      "sha256": "42eaaa6ebb631d62d73b8fbda9901a8c92dfcfc9c18e8b1c5c260c3999f6006b"
+    },
+    {
+      "path": "datasets/hf_info_metadata.json",
+      "bytes": 1402,
+      "sha256": "117a3338bd18ede087e2cf846479ce8594aa62adf1b96b253a2f158269875eca"
+    },
+    {
+      "path": "datasets/hf_readme.md",
+      "bytes": 4588,
+      "sha256": "9b55a38a3f10f8a4f7d7c45b78ada81fb25b41d27183dd44f06e06e3fb6fb7c9"
+    },
+    {
+      "path": "datasets/hf_tree_metadata.json",
+      "bytes": 2320,
+      "sha256": "74a0dc5167b82b6e09f95f4c9a240a73fef8363bd8c7fc1c350e81f3c184bf77"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/download-manifest.json",
+      "bytes": 1354,
+      "sha256": "7af4573a87d99ce2304da6f035c14f0991ed4de2c6f39a35c59ff64fe24fdcaa"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/linkage-audit.json",
+      "bytes": 1362,
+      "sha256": "a18c9ca1115d288bdcf746becc7ec6fbdc2cb3974e636c5c1c06e80312fa168c"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/raw/Baseline.csv",
+      "bytes": 966914,
+      "sha256": "0518c94105c53009b4a19668e45817fac5cd68d14de4f86d6aae6b381d2d7e47"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/raw/EMA.csv",
+      "bytes": 2333014,
+      "sha256": "fbff34486ac2d4ff61d5e92b2caa7276cec51719973fe232df3096d3357f8d87"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/raw/GPS_Baseline.csv",
+      "bytes": 131304,
+      "sha256": "b4bbb2ae5e1c31c8da1b2d9b56d960e2171fcfd0e3b9e4de4cb9d1b082fff421"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/raw/GPS_EMA.csv",
+      "bytes": 370616,
+      "sha256": "394336857498adc6f7c97e1294426bfdc293c63da2a7ef8c13c6b2e33a858530"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/record.json",
+      "bytes": 11928,
+      "sha256": "e28f27555a5623b414b1da8a35aeabfbe104e8e0083bda126103bbaf802fd019"
+    },
+    {
+      "path": "datasets/location_sources/corona_health/schema-audit.json",
+      "bytes": 7740,
+      "sha256": "6d9fa28ca7c8d848e398106eb8bd0bc0f2613707879811f23db8cd24ec36198e"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_tooling_sample/linked-schema-audit.json",
+      "bytes": 1682,
+      "sha256": "eb31b3ff471eee8d7888cf7e92753c8650034475201588155e23b52f6b9b965b"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_tooling_sample/manifest.json",
+      "bytes": 14121,
+      "sha256": "61b563f019b2db42646888523d9e7279d8146fed8d0e0715c54ddda015250c30"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/archive-listing.json",
+      "bytes": 7233,
+      "sha256": "48a05894726de070220bf24e355b7cad3754e2e4b57009c357be840b19d0adec"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/decoded/gps.csv",
+      "bytes": 15965671,
+      "sha256": "6546ffbbfdae7f4362ee5a5eb1b8833ce5f63cb0a0becac6b69063c7d3e23755"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/decoded/PAM.csv",
+      "bytes": 192470,
+      "sha256": "8c22a9498dceac8daca1c3b4248971b84ad6c814f12e2eb8aa451123f89df717"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/decoded/PHQ-9.csv",
+      "bytes": 12251,
+      "sha256": "2e1761116c5da72cd83702f4f4538ef511769b64fc42174a1983c71b4fdc9aa4"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/decoded/Sleep.csv",
+      "bytes": 82097,
+      "sha256": "542c5e012fa68e87f5912b6a84017bdcd569cfdafc10a1dba8a74370767756c7"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/member-manifest.json",
+      "bytes": 2461,
+      "sha256": "f1ecbfe9b28c5fedefd4f8c052b3cbbebc432cee0fd23e3dbd97e695d92697bb"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/raw/gps.Rds",
+      "bytes": 3035790,
+      "sha256": "7930f530951385ef15bb75d80b648f44a801f09732cf14c4f3f9023cc1895e49"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/raw/PAM.Rds",
+      "bytes": 45675,
+      "sha256": "2bbded32ee54c761acd9933d4157d67cfc43da5770b7b5043e67819b9efba2c5"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/raw/PHQ-9.Rds",
+      "bytes": 1456,
+      "sha256": "b0cbe76b1e505431947aebfd340ade43eadc90fec5b0d823879c32edc710d52b"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/raw/Sleep.Rds",
+      "bytes": 24056,
+      "sha256": "72fba2e32c6b5ea609a18cb2b8c042892c4bc76dfae33f1ac8b5be93e0578e88"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/record.json",
+      "bytes": 4535,
+      "sha256": "f539d342269b61e1c0556ca4cc30dc21db218744f0f00748261a35749af3204e"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/response-timestamp-audit.json",
+      "bytes": 6052,
+      "sha256": "7302a6c31fff07b1ea5042c12613db8fa5f6e58eefda112c8d33a2b18a2dfd72"
+    },
+    {
+      "path": "datasets/location_sources/studentlife_zenodo/sleep-codebook.json",
+      "bytes": 1233,
+      "sha256": "de42a413cae1118278acdc45ac8b803aaf90987fe72f67705c81dfdd475c21d2"
+    },
+    {
+      "path": "datasets/location_sources/syn_roadgps/raw/.gitattributes",
+      "bytes": 2552,
+      "sha256": "f5e365958df2f444910bf4535c13cce06f4f5cee9d9f5c1de2991665bc787328"
+    },
+    {
+      "path": "datasets/location_sources/syn_roadgps/raw/README.md",
+      "bytes": 759,
+      "sha256": "73606989b6801a2c84c713a4422d1929f186c2592019c53dd4264cf8f35601f2"
+    },
+    {
+      "path": "datasets/location_sources/syn_roadgps/raw/roadmap.geo",
+      "bytes": 7327374,
+      "sha256": "d8b1019ae76b0bb32610409a7cd9b198177b2247405021c1f44613bbb93764a8"
+    },
+    {
+      "path": "datasets/location_sources/syn_roadgps/raw/roadmap.rel",
+      "bytes": 3036045,
+      "sha256": "defe832d8bad76c9782e7bd2853fe5f4f9843581c6fc56e315eb23748d94a0d3"
+    },
+    {
+      "path": "datasets/location_sources/syn_roadgps_download_manifest.json",
+      "bytes": 2163,
+      "sha256": "ed88495570f676e1abcc4ae484206709f640274bb46cf7feecf47c9172bbd360"
+    },
+    {
+      "path": "datasets/location_sources/syn_roadgps_info.json",
+      "bytes": 1562,
+      "sha256": "600ca7f958cb5262f56701b2d187e932ae18c12af45af44700627ee7631cf7e4"
+    },
+    {
+      "path": "datasets/location_sources/syn_roadgps_tree.json",
+      "bytes": 922,
+      "sha256": "337571d4de9acd435fd61661e4bae30f45fcf2bd2abda258fd6d19de125deb72"
+    },
+    {
+      "path": "datasets/location_sources/uci_gps/download-manifest.json",
+      "bytes": 761,
+      "sha256": "89111bf5cd5ae9b8de87b50b2fea60ad2b5c63cee627d8302ad07450a1cd2293"
+    },
+    {
+      "path": "datasets/location_sources/uci_gps/download-url.txt",
+      "bytes": 67,
+      "sha256": "c4c852fc18f03082f0deab5e206fa21ab648f29c5ec78b07eb18dad206e8bc01"
+    },
+    {
+      "path": "datasets/location_sources/uci_gps/raw/GPS Trajectory.rar",
+      "bytes": 220690,
+      "sha256": "110d2d4e2e179d7b6397a349ff52e425c44da12b57cbeb1a165a544acb13a59a"
+    },
+    {
+      "path": "datasets/location_sources/uci_gps/raw/gps-trajectories.zip",
+      "bytes": 220824,
+      "sha256": "0e19d39a7562722b8aaa02580deade3ae0893921f9dc28d14dedacbde2c2cc94"
+    },
+    {
+      "path": "datasets/psyche_d/raw/anon_processed_df_parquet",
+      "bytes": 21310927,
+      "sha256": "4bf1d7622d947f5bb62067c91789e1ef5de0411f439a772b8a7941282cc1cd78"
+    },
+    {
+      "path": "datasets/psyche_d/raw/Feature explanations - anonymized data - Sheet1.tsv",
+      "bytes": 10919,
+      "sha256": "e346b57eb81c8c7d22a6ff0bda71214e527d8bed72eef1c2218d7e5826612e3e"
+    },
+    {
+      "path": "datasets/psyche_d/raw/LICENSE.pdf",
+      "bytes": 85361,
+      "sha256": "9cb1008e4a55d9aeece0fcc79456e7a3cf4f6dc32e1452b57c925d7918942434"
+    },
+    {
+      "path": "datasets/README.md",
+      "bytes": 4851,
+      "sha256": "9e82ebbba3a9b8cef3a7bd4c8ca271ee9b3044613658bbf7d41d1ff471175bf4"
+    },
+    {
+      "path": "datasets/zenodo_metadata.json",
+      "bytes": 8757,
+      "sha256": "f21d016f4d9318eee2d487255acfa3190474caf83878bf7108a915e3de189956"
+    },
+    {
+      "path": "relapse-demo/data/analysis-example.json",
+      "bytes": 64604,
+      "sha256": "da476efdaa2a623a8e1fea47c2e3ad2595a9166c34792a7c629f78ecc112f153"
+    },
+    {
+      "path": "relapse-demo/data/bundle-manifest.json",
+      "bytes": 464,
+      "sha256": "8d33ceda4241bfe3579856257051612e2e24efa00355c21d8e0edfb96698dd2a"
+    },
+    {
+      "path": "relapse-demo/data/data-audit.json",
+      "bytes": 2377,
+      "sha256": "cf1e2256cdc83516d8e338342b1c8379cc5cb2d60529277cfe4f586adb418d07"
+    },
+    {
+      "path": "relapse-demo/data/demo-data.js",
+      "bytes": 36465780,
+      "sha256": "e3c5c0d02ea2e2fb20754ec8aafe9822dfeb9b7aaa6db8bb63bd064665954b64"
+    },
+    {
+      "path": "relapse-demo/data/demo-data.json",
+      "bytes": 36465704,
+      "sha256": "781ecdb4384a64cd47d5916369537d05c475be1c18789688e7925c8b7c6deafa"
+    },
+    {
+      "path": "relapse-demo/data/engine-cohort-audit.json",
+      "bytes": 1461,
+      "sha256": "1c489c5193f53792de4c503f73a2452a61d92c67a570ba28ce9e55043cb937d3"
+    },
+    {
+      "path": "relapse-demo/data/hanover-streets.geojson",
+      "bytes": 416498,
+      "sha256": "93bbc081f83591a86925db2773e8301530de5ed2738a566c54997f862a37fa54"
+    },
+    {
+      "path": "relapse-demo/data/hanover-streets.js",
+      "bytes": 416569,
+      "sha256": "6b5a477ea3cd89f6d78defdd7699558bc9c419dd08b2078817f76b7734596362"
+    },
+    {
+      "path": "relapse-demo/data/location-samples.js",
+      "bytes": 287015,
+      "sha256": "1e9252b833d895e1810b439cec56268872f0e9d20547c7153cd02fa9fa56ae99"
+    },
+    {
+      "path": "relapse-demo/data/location-samples.json",
+      "bytes": 286991,
+      "sha256": "b68cd74a69a3c0e0fa054302678e6fe96b8b7421eeff8fbe58c917503e518baf"
+    },
+    {
+      "path": "relapse-demo/data/location-traces.js",
+      "bytes": 499122,
+      "sha256": "f4e391df113d94ac24307f7e6295ccb46e8a006bbe19f221461f005e149a1195"
+    },
+    {
+      "path": "relapse-demo/data/location-traces.json",
+      "bytes": 499096,
+      "sha256": "e57dcd4a485ce0ee0f83582c149cf990af08c649b9602f3cec7476c544957741"
+    },
+    {
+      "path": "relapse-demo/data/map-source/hanover.osm",
+      "bytes": 2885400,
+      "sha256": "17db3baf4b9f30d5b50c8b8f25e8e6af3cc6d4828aec313d7b2d90dced59ec30"
+    },
+    {
+      "path": "relapse-demo/data/map-source/helsinki-esplanadi.osm",
+      "bytes": 2718123,
+      "sha256": "174a2e375a96aad553b41c47550f5dfc6f3eec297dee4b366eaf76b12c11f3b6"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-01.osm",
+      "bytes": 5451238,
+      "sha256": "74ecea7c78d0d09158061d13dde5adba54a06669c035f8f0e7679e81f6bea04d"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-02.osm",
+      "bytes": 5198636,
+      "sha256": "682659e4c88d02b09d9c271d6c37731cf3530c35b32b461fe0fbc598ae78d372"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-03.osm",
+      "bytes": 4702458,
+      "sha256": "6b6daa46a3dfebd1997f7afb58d9dd9ccc0d9d751028e43c5c89a1f381430476"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-04.osm",
+      "bytes": 6641767,
+      "sha256": "05d3e7a25c7130a22ec8c583a667476768b4e3ae3c226ada6b75f701ad83d1ec"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-05.osm",
+      "bytes": 6605714,
+      "sha256": "0dc0a249cd4c860f88c24201727c9f0c429d4de89b8e11d4fd42d9f4e8b10998"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-06.osm",
+      "bytes": 5785270,
+      "sha256": "3c79bc6b7c475000db20acd1c819fc9a2b1bb4de67d81bfe13e11bb1365a6cb3"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-07.osm",
+      "bytes": 2725386,
+      "sha256": "821106c4085f414b6a3956d7d89810ecad8a3ca074e1e91a7400aa3b81694ec8"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-08.osm",
+      "bytes": 1675399,
+      "sha256": "0bad2d3d81ee0944d48f27281eec11e548dd3ababf1d70c211620f99b30f7f72"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-09.osm",
+      "bytes": 6380608,
+      "sha256": "22f3e8f65cc4772063861ebbc12c4e757ae1ab67e9214934d023a979623d7c23"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-10.osm",
+      "bytes": 2666274,
+      "sha256": "4b24b251fb90d657935d228feda7ee4ba5e27fbf3ecdd94ce8c1045472bf8af0"
+    },
+    {
+      "path": "relapse-demo/data/map-source/neighborhood-11.osm",
+      "bytes": 5788287,
+      "sha256": "ba3a87cfd665bbf9840eaa37159bc8755b8ac572619246e0069a664b37c1f36b"
+    },
+    {
+      "path": "relapse-demo/data/map-streets.geojson",
+      "bytes": 184250,
+      "sha256": "29e2f3a82463b5b04ab0dd3e4439b4114d036e92685b206184d18dafcc1a716b"
+    },
+    {
+      "path": "relapse-demo/data/map-streets.js",
+      "bytes": 184272,
+      "sha256": "089c0e195129a75dadeb41de296885333c7f11fb4185a94c7a4e27316f5ecdbc"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-01.js",
+      "bytes": 403867,
+      "sha256": "dd12586ea7fe9b75bd3a83352393a56dd0d77272e1b8dddc3c3cfe3f35bee0c3"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-02.js",
+      "bytes": 299657,
+      "sha256": "f9d3bf36a9f9d8a43f238f9382438d7b17b2225b9196c7574ec7b823c973642c"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-03.js",
+      "bytes": 467604,
+      "sha256": "052033fe3e0f9b24d6958c012f51c1ddbdee5ecaa6224702c193e6268f6588e4"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-04.js",
+      "bytes": 503835,
+      "sha256": "d7c9ac04af55941a97e2606bdc1995dc95023796fa30e454aa10389a01a7ac11"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-05.js",
+      "bytes": 405351,
+      "sha256": "48f68150194015897e0e4e00b24524eebef49d7d2abe8771628ddfdf63730f55"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-06.js",
+      "bytes": 345180,
+      "sha256": "a4cb0e34107deaaf2ca17c2944886d36295eaf4f36e16b742c02b2f151339508"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-07.js",
+      "bytes": 187415,
+      "sha256": "6515feeee21c6de6c534f036b3875255abdc0bbc78891be1aef0cc2b63a7c019"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-08.js",
+      "bytes": 181949,
+      "sha256": "275e6f78a4a4d41a95ea05e1898374b516a2db2f3b82e50e428e5893d260b362"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-09.js",
+      "bytes": 265750,
+      "sha256": "adb86d631db905ab9a94db91efcefc54f662073a173c45c5a0d9448b79143ae7"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-10.js",
+      "bytes": 209308,
+      "sha256": "f769f3b60bd4658e2502aa3f2df76b65229765cb527ec84c68141145f023f1f8"
+    },
+    {
+      "path": "relapse-demo/data/neighborhood-11.js",
+      "bytes": 379308,
+      "sha256": "7ccef10f03fc61dca9215dba11726df0db7cfe556692c33bf0ff5e5545e8ea20"
+    },
+    {
+      "path": "relapse-demo/data/nfi-overview.js",
+      "bytes": 11284,
+      "sha256": "f40b80055e4e1cba7171e398f92cc79cc3e09b22cefb68c40f96320395358300"
+    },
+    {
+      "path": "relapse-demo/data/studentlife-data.js",
+      "bytes": 20281029,
+      "sha256": "f7335039cfea7e3e9c4ccab97cc57e55da5a2d764fac72892e33ad25091d0513"
+    },
+    {
+      "path": "relapse-demo/data/studentlife-data.json",
+      "bytes": 20281002,
+      "sha256": "90b4a375ad8ad915ce627a657e5af20f4f24eceb42b2451bd45d57ce39bec616"
+    }
+  ]
+}

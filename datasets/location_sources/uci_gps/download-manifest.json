@@ -1,0 +1,12 @@
+{
+  "source": "https://archive.ics.uci.edu/dataset/354/gps+trajectories",
+  "doi": "10.24432/C54S5Z",
+  "license": "CC-BY-4.0",
+  "attribution": "Cruz, M., Macedo, H., Barreto, R., & Guimares, A. (2015). GPS Trajectories. UCI Machine Learning Repository.",
+  "url": "http://archive.ics.uci.edu/static/public/354/gps%2Btrajectories.zip",
+  "file": "gps-trajectories.zip",
+  "bytes": 220824,
+  "sha256": "0e19d39a7562722b8aaa02580deade3ae0893921f9dc28d14dedacbde2c2cc94",
+  "publisherChecksum": null,
+  "integrityNotice": "Official HTTPS endpoint had an expired certificate. Download used public HTTP official host; no credentials; no cryptographic publisher checksum supplied. ZIP CRC and local SHA256 recorded, not proof of publisher authenticity."
+}

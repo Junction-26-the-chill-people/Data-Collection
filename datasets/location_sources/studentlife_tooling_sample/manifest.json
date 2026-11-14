@@ -1,0 +1,565 @@
+{
+  "url": "https://raw.githubusercontent.com/frycast/studentlife/master/tests/testthat/testdata/sample/sample_dataset.tar.bz2",
+  "sha256": "1e7dde4320c44bac4930959bae10c055d307f0fdc10ea53c64132b647d16e5fa",
+  "bytes": 49784,
+  "memberCount": 187,
+  "members": [
+    {
+      "name": "dataset/EMA/EMA_definition.json",
+      "bytes": 26161
+    },
+    {
+      "name": "dataset/EMA/response/Activity/Activity_u00.json",
+      "bytes": 4770
+    },
+    {
+      "name": "dataset/EMA/response/Activity/Activity_u01.json",
+      "bytes": 1088
+    },
+    {
+      "name": "dataset/EMA/response/Activity/Activity_u02.json",
+      "bytes": 1967
+    },
+    {
+      "name": "dataset/EMA/response/Administration's response/Administration's response_u00.json",
+      "bytes": 1241
+    },
+    {
+      "name": "dataset/EMA/response/Administration's response/Administration's response_u01.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Administration's response/Administration's response_u02.json",
+      "bytes": 313
+    },
+    {
+      "name": "dataset/EMA/response/Behavior/Behavior_u00.json",
+      "bytes": 5193
+    },
+    {
+      "name": "dataset/EMA/response/Behavior/Behavior_u01.json",
+      "bytes": 558
+    },
+    {
+      "name": "dataset/EMA/response/Behavior/Behavior_u02.json",
+      "bytes": 719
+    },
+    {
+      "name": "dataset/EMA/response/Boston Bombing/Boston Bombing_u00.json",
+      "bytes": 228
+    },
+    {
+      "name": "dataset/EMA/response/Boston Bombing/Boston Bombing_u01.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Boston Bombing/Boston Bombing_u02.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Cancelled Classes/Cancelled Classes_u00.json",
+      "bytes": 404
+    },
+    {
+      "name": "dataset/EMA/response/Cancelled Classes/Cancelled Classes_u01.json",
+      "bytes": 149
+    },
+    {
+      "name": "dataset/EMA/response/Cancelled Classes/Cancelled Classes_u02.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Class 2/Class 2_u00.json",
+      "bytes": 514
+    },
+    {
+      "name": "dataset/EMA/response/Class 2/Class 2_u01.json",
+      "bytes": 345
+    },
+    {
+      "name": "dataset/EMA/response/Class 2/Class 2_u02.json",
+      "bytes": 174
+    },
+    {
+      "name": "dataset/EMA/response/Class/Class_u00.json",
+      "bytes": 4515
+    },
+    {
+      "name": "dataset/EMA/response/Class/Class_u01.json",
+      "bytes": 6436
+    },
+    {
+      "name": "dataset/EMA/response/Class/Class_u02.json",
+      "bytes": 3945
+    },
+    {
+      "name": "dataset/EMA/response/Comment/Comment_u00.json",
+      "bytes": 3259
+    },
+    {
+      "name": "dataset/EMA/response/Comment/Comment_u01.json",
+      "bytes": 2081
+    },
+    {
+      "name": "dataset/EMA/response/Comment/Comment_u02.json",
+      "bytes": 542
+    },
+    {
+      "name": "dataset/EMA/response/Dartmouth now/Dartmouth now_u00.json",
+      "bytes": 313
+    },
+    {
+      "name": "dataset/EMA/response/Dartmouth now/Dartmouth now_u01.json",
+      "bytes": 313
+    },
+    {
+      "name": "dataset/EMA/response/Dartmouth now/Dartmouth now_u02.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Dimensions protestors/Dimensions protestors_u00.json",
+      "bytes": 606
+    },
+    {
+      "name": "dataset/EMA/response/Dimensions protestors/Dimensions protestors_u01.json",
+      "bytes": 313
+    },
+    {
+      "name": "dataset/EMA/response/Dimensions protestors/Dimensions protestors_u02.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Dimensions/Dimensions_u00.json",
+      "bytes": 387
+    },
+    {
+      "name": "dataset/EMA/response/Dimensions/Dimensions_u01.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Dimensions/Dimensions_u02.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Dining Halls/Dining Halls_u00.json",
+      "bytes": 1198
+    },
+    {
+      "name": "dataset/EMA/response/Dining Halls/Dining Halls_u01.json",
+      "bytes": 686
+    },
+    {
+      "name": "dataset/EMA/response/Dining Halls/Dining Halls_u02.json",
+      "bytes": 1694
+    },
+    {
+      "name": "dataset/EMA/response/Do Campbell's jokes suck_/Do Campbell's jokes suck__u00.json",
+      "bytes": 1193
+    },
+    {
+      "name": "dataset/EMA/response/Do Campbell's jokes suck_/Do Campbell's jokes suck__u01.json",
+      "bytes": 168
+    },
+    {
+      "name": "dataset/EMA/response/Do Campbell's jokes suck_/Do Campbell's jokes suck__u02.json",
+      "bytes": 204
+    },
+    {
+      "name": "dataset/EMA/response/Events/Events_u00.json",
+      "bytes": 3725
+    },
+    {
+      "name": "dataset/EMA/response/Events/Events_u01.json",
+      "bytes": 198
+    },
+    {
+      "name": "dataset/EMA/response/Events/Events_u02.json",
+      "bytes": 223
+    },
+    {
+      "name": "dataset/EMA/response/Exercise/Exercise_u00.json",
+      "bytes": 6321
+    },
+    {
+      "name": "dataset/EMA/response/Exercise/Exercise_u01.json",
+      "bytes": 1109
+    },
+    {
+      "name": "dataset/EMA/response/Exercise/Exercise_u02.json",
+      "bytes": 2109
+    },
+    {
+      "name": "dataset/EMA/response/Green Key 1/Green Key 1_u00.json",
+      "bytes": 417
+    },
+    {
+      "name": "dataset/EMA/response/Green Key 1/Green Key 1_u01.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Green Key 1/Green Key 1_u02.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Green Key 2/Green Key 2_u00.json",
+      "bytes": 244
+    },
+    {
+      "name": "dataset/EMA/response/Green Key 2/Green Key 2_u01.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Green Key 2/Green Key 2_u02.json",
+      "bytes": 2
+    },
+    {
+      "name": "dataset/EMA/response/Lab/Lab_u00.json",
+      "bytes": 1591
+    },
+    {
+      "name": "dataset/EMA/response/Lab/Lab_u01.json",
+      "bytes": 295
+    },
+    {
+      "name": "dataset/EMA/response/Lab/Lab_u02.json",
+      "bytes": 150
+    },
+    {
+      "name": "dataset/EMA/response/Mood 1/Mood 1_u00.json",
+      "bytes": 1320
+    },
+    {
+      "name": "dataset/EMA/response/Mood 1/Mood 1_u01.json",
+      "bytes": 248
+    },
+    {
+      "name": "dataset/EMA/response/Mood 1/Mood 1_u02.json",
+      "bytes": 249
+    },
+    {
+      "name": "dataset/EMA/response/Mood 2/Mood 2_u00.json",
+      "bytes": 1704
+    },
+    {
+      "name": "dataset/EMA/response/Mood 2/Mood 2_u01.json",
+      "bytes": 331
+    },
+    {
+      "name": "dataset/EMA/response/Mood 2/Mood 2_u02.json",
+      "bytes": 458
+    },
+    {
+      "name": "dataset/EMA/response/Mood/Mood_u00.json",
+      "bytes": 1955
+    },
+    {
+      "name": "dataset/EMA/response/Mood/Mood_u01.json",
+      "bytes": 393
+    },
+    {
+      "name": "dataset/EMA/response/Mood/Mood_u02.json",
+      "bytes": 197
+    },
+    {
+      "name": "dataset/EMA/response/PAM/PAM_u00.json",
+      "bytes": 29393
+    },
+    {
+      "name": "dataset/EMA/response/PAM/PAM_u01.json",
+      "bytes": 10585
+    },
+    {
+      "name": "dataset/EMA/response/PAM/PAM_u02.json",
+      "bytes": 16765
+    },
+    {
+      "name": "dataset/EMA/response/QR_Code/QR_u00.json",
+      "bytes": 5287
+    },
+    {
+      "name": "dataset/EMA/response/QR_Code/QR_u01.json",
+      "bytes": 965
+    },
+    {
+      "name": "dataset/EMA/response/QR_Code/QR_u02.json",
+      "bytes": 1187
+    },
+    {
+      "name": "dataset/EMA/response/Sleep/Sleep_u00.json",
+      "bytes": 9614
+    },
+    {
+      "name": "dataset/EMA/response/Sleep/Sleep_u01.json",
+      "bytes": 4852
+    },
+    {
+      "name": "dataset/EMA/response/Sleep/Sleep_u02.json",
+      "bytes": 4645
+    },
+    {
+      "name": "dataset/EMA/response/Social/Social_u00.json",
+      "bytes": 5699
+    },
+    {
+      "name": "dataset/EMA/response/Social/Social_u01.json",
+      "bytes": 2572
+    },
+    {
+      "name": "dataset/EMA/response/Social/Social_u02.json",
+      "bytes": 2839
+    },
+    {
+      "name": "dataset/EMA/response/Stress/Stress_u00.json",
+      "bytes": 9116
+    },
+    {
+      "name": "dataset/EMA/response/Stress/Stress_u01.json",
+      "bytes": 4118
+    },
+    {
+      "name": "dataset/EMA/response/Stress/Stress_u02.json",
+      "bytes": 4007
+    },
+    {
+      "name": "dataset/EMA/response/Study Spaces/Study Spaces_u00.json",
+      "bytes": 2283
+    },
+    {
+      "name": "dataset/EMA/response/Study Spaces/Study Spaces_u01.json",
+      "bytes": 183
+    },
+    {
+      "name": "dataset/EMA/response/Study Spaces/Study Spaces_u02.json",
+      "bytes": 722
+    },
+    {
+      "name": "dataset/app_usage/running_app_u00.csv",
+      "bytes": 655794
+    },
+    {
+      "name": "dataset/app_usage/running_app_u01.csv",
+      "bytes": 348582
+    },
+    {
+      "name": "dataset/calendar/calendar_u00.csv",
+      "bytes": 2628
+    },
+    {
+      "name": "dataset/calendar/calendar_u01.csv",
+      "bytes": 1134
+    },
+    {
+      "name": "dataset/calendar/calendar_u02.csv",
+      "bytes": 2351
+    },
+    {
+      "name": "dataset/call_log/call_log_u00.csv",
+      "bytes": 24777
+    },
+    {
+      "name": "dataset/call_log/call_log_u01.csv",
+      "bytes": 6484
+    },
+    {
+      "name": "dataset/call_log/call_log_u02.csv",
+      "bytes": 19779
+    },
+    {
+      "name": "dataset/dinning/u01.txt",
+      "bytes": 10164
+    },
+    {
+      "name": "dataset/dinning/u02.txt",
+      "bytes": 14587
+    },
+    {
+      "name": "dataset/dinning/u04.txt",
+      "bytes": 24925
+    },
+    {
+      "name": "dataset/education/class.csv",
+      "bytes": 1329
+    },
+    {
+      "name": "dataset/education/class_info.json",
+      "bytes": 25151
+    },
+    {
+      "name": "dataset/education/deadlines.csv",
+      "bytes": 8079
+    },
+    {
+      "name": "dataset/education/grades.csv",
+      "bytes": 808
+    },
+    {
+      "name": "dataset/education/piazza.csv",
+      "bytes": 1065
+    },
+    {
+      "name": "dataset/sensing/activity/activity_u00.csv",
+      "bytes": 300
+    },
+    {
+      "name": "dataset/sensing/activity/activity_u01.csv",
+      "bytes": 215
+    },
+    {
+      "name": "dataset/sensing/activity/activity_u02.csv",
+      "bytes": 249
+    },
+    {
+      "name": "dataset/sensing/audio/audio_u00.csv",
+      "bytes": 314
+    },
+    {
+      "name": "dataset/sensing/audio/audio_u01.csv",
+      "bytes": 739
+    },
+    {
+      "name": "dataset/sensing/audio/audio_u02.csv",
+      "bytes": 348
+    },
+    {
+      "name": "dataset/sensing/bluetooth/bt_u00.csv",
+      "bytes": 878
+    },
+    {
+      "name": "dataset/sensing/bluetooth/bt_u01.csv",
+      "bytes": 975
+    },
+    {
+      "name": "dataset/sensing/bluetooth/bt_u02.csv",
+      "bytes": 757
+    },
+    {
+      "name": "dataset/sensing/conversation/conversation_u00.csv",
+      "bytes": 393
+    },
+    {
+      "name": "dataset/sensing/conversation/conversation_u01.csv",
+      "bytes": 341
+    },
+    {
+      "name": "dataset/sensing/conversation/conversation_u02.csv",
+      "bytes": 445
+    },
+    {
+      "name": "dataset/sensing/dark/dark_u00.csv",
+      "bytes": 632
+    },
+    {
+      "name": "dataset/sensing/dark/dark_u01.csv",
+      "bytes": 586
+    },
+    {
+      "name": "dataset/sensing/dark/dark_u02.csv",
+      "bytes": 655
+    },
+    {
+      "name": "dataset/sensing/gps/gps_u00.csv",
+      "bytes": 831
+    },
+    {
+      "name": "dataset/sensing/gps/gps_u01.csv",
+      "bytes": 995
+    },
+    {
+      "name": "dataset/sensing/gps/gps_u02.csv",
+      "bytes": 971
+    },
+    {
+      "name": "dataset/sensing/phonecharge/phonecharge_u00.csv",
+      "bytes": 218
+    },
+    {
+      "name": "dataset/sensing/phonecharge/phonecharge_u01.csv",
+      "bytes": 218
+    },
+    {
+      "name": "dataset/sensing/phonecharge/phonecharge_u02.csv",
+      "bytes": 310
+    },
+    {
+      "name": "dataset/sensing/phonelock/phonelock_u00.csv",
+      "bytes": 264
+    },
+    {
+      "name": "dataset/sensing/phonelock/phonelock_u01.csv",
+      "bytes": 264
+    },
+    {
+      "name": "dataset/sensing/phonelock/phonelock_u02.csv",
+      "bytes": 195
+    },
+    {
+      "name": "dataset/sensing/wifi/wifi_u00.csv",
+      "bytes": 624
+    },
+    {
+      "name": "dataset/sensing/wifi/wifi_u01.csv",
+      "bytes": 579
+    },
+    {
+      "name": "dataset/sensing/wifi/wifi_u02.csv",
+      "bytes": 1042
+    },
+    {
+      "name": "dataset/sensing/wifi_location/wifi_location_u00.csv",
+      "bytes": 814
+    },
+    {
+      "name": "dataset/sensing/wifi_location/wifi_location_u01.csv",
+      "bytes": 607
+    },
+    {
+      "name": "dataset/sensing/wifi_location/wifi_location_u02.csv",
+      "bytes": 345
+    },
+    {
+      "name": "dataset/sms/sms_u00.csv",
+      "bytes": 30709
+    },
+    {
+      "name": "dataset/sms/sms_u15.csv",
+      "bytes": 3812
+    },
+    {
+      "name": "dataset/sms/sms_u39.csv",
+      "bytes": 2228
+    },
+    {
+      "name": "dataset/survey/BigFive.csv",
+      "bytes": 73164
+    },
+    {
+      "name": "dataset/survey/FlourishingScale.csv",
+      "bytes": 2484
+    },
+    {
+      "name": "dataset/survey/LonelinessScale.csv",
+      "bytes": 13949
+    },
+    {
+      "name": "dataset/survey/PHQ-9.csv",
+      "bytes": 12953
+    },
+    {
+      "name": "dataset/survey/PerceivedStressScale.csv",
+      "bytes": 11134
+    },
+    {
+      "name": "dataset/survey/panas.csv",
+      "bytes": 4025
+    },
+    {
+      "name": "dataset/survey/psqi.csv",
+      "bytes": 31716
+    },
+    {
+      "name": "dataset/survey/vr_12.csv",
+      "bytes": 24688
+    }
+  ],
+  "provenance": "Small test fixture maintained by StudentLife R-tooling author, not Dartmouth original release; study and fixture modification status require inspection."
+}

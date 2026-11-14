@@ -1,0 +1,12 @@
+{
+  "realInput": "E:\\Junction26\\relapse-demo\\.tmp\\all-records\\demo-data.json",
+  "realInputSha256": "199c7b6ffae0b6c9ccb87b83f5e53de5aa4a86fa59f9c01f14878c8dffa86081",
+  "realParticipants": 4948,
+  "realRecords": 35694,
+  "realMissingSlots": 6197,
+  "syntheticParticipants": 11,
+  "syntheticSlots": 1320,
+  "syntheticSeed": 20261114,
+  "realDataImputed": false,
+  "outputSha256": "781ecdb4384a64cd47d5916369537d05c475be1c18789688e7925c8b7c6deafa"
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7ebe4"><title>Within</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="vendor/leaflet/leaflet.css"><link rel="stylesheet" href="movement-map.css"><link rel="stylesheet" href="styles.css"></head>
+<body data-view="personal"><a href="#main" class="skip-link">Skip to today</a>
+<header class="top">
+ <a class="mark" href="#main" aria-label="Within"><span class="mark-orb" aria-hidden="true"></span><span class="mark-word">within</span></a>
+ <button id="person-button" class="person-chip" type="button" aria-haspopup="dialog" aria-controls="picker"><span id="story-avatar" class="pebble" aria-hidden="true">N</span><span class="person-text"><b id="story-name">Choose someone</b><small id="person-sub">Demo story</small></span><svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+ <div class="top-end"><div class="view-switch" role="group" aria-label="View"><button id="view-personal" type="button" aria-pressed="true">Personal</button><button id="view-clinical" type="button" aria-pressed="false">Clinical</button></div><button id="tour-start" class="quiet" type="button">Tour</button></div>
+</header>
+
+<div id="picker" class="sheet" role="dialog" aria-modal="true" aria-labelledby="picker-title" hidden>
+ <div class="sheet-backdrop" data-close-picker></div>
+ <div class="sheet-card">
+  <div class="sheet-head"><h2 id="picker-title">Whose days are we looking at?</h2><button id="picker-close" class="quiet" type="button">Close</button></div>
+  <div id="source-tabs" class="source-tabs" role="group" aria-label="Where the data comes from"></div>
+  <p id="source-blurb" class="sheet-blurb"></p>
+  <section id="review-selection" class="selection-bar" aria-label="Choose dataset and participant">
+   <label for="dataset" class="sr-only">Data source</label><select id="dataset" class="sr-only" tabindex="-1"></select>
+   <label id="participant-label" for="participant" class="sr-only">Person</label><select id="participant" class="sr-only" tabindex="-1"></select>
+   <div id="search-control" class="search-line"><label for="participant-search">Find someone in the archive</label><input id="participant-search" type="search" placeholder="Type a name or an ID like psyche-924" autocomplete="off" spellcheck="false"><p id="search-note" class="search-note" role="status"></p></div>
+   <span id="source-pill" class="pill">Demo data</span>
+  </section>
+  <div id="story-strip" class="pebbles" role="list"></div>
+ </div>
+</div>
+
+<main id="main">
+<section class="page-heading clinical-only"><div><p id="page-eyebrow" class="kicker">Longitudinal review</p><h1 id="page-title">See the routine. Follow the change.</h1></div><button id="export" class="ghost-btn" type="button">Export assessment</button></section>
+<section class="story-heading clinical-only"><p id="story-summary"></p><p id="subject-note" class="story-meta"></p></section>
+
+<nav id="day-nav" class="day-nav" aria-label="Choose a day">
+ <button id="previous-period" class="day-arrow" type="button" aria-label="Previous day"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <div class="day-center"><div class="date-face"><span id="selected-period-label" class="sr-only">Selected day</span><strong id="selected-date">—</strong><span id="phase-current"></span></div><div id="date-control" class="date-control"><label for="date-picker" class="sr-only">Go to date</label><input type="date" id="date-picker" aria-describedby="date-feedback"><span id="date-feedback" class="date-feedback" role="status"></span></div></div>
+ <button id="next-period" class="day-arrow" type="button" aria-label="Next day"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+ <div id="window-control" class="window-control"><span class="control-label">Look at</span><div id="window-presets" class="window-presets" role="group" aria-label="Comparison window"></div></div>
+ <button id="play" class="play-button" type="button" aria-pressed="false">▶ Play</button>
+</nav>
+
+<div id="workspace" class="workspace">
+<aside id="controls" class="controls" aria-label="Reference and comparison controls">
+ <div class="controls-head"><h2 id="baseline-title">Your usual</h2><button id="controls-close" class="quiet personal-only" type="button">Done</button></div>
+ <p id="baseline-note" class="soft"></p><div id="reference-chip" class="reference-chip"></div>
+ <div class="reference-stats"><div><strong id="coverage">—</strong><span>of measures available</span></div><div><strong id="sample-count">—</strong><span>days on record</span></div></div>
+ <details class="reference-controls" open><summary>Choose a different stretch</summary><label for="reference-start">Starts <output id="reference-start-value"></output></label><input type="range" id="reference-start" min="0" max="11" value="0"><label for="baseline">Lasts <output id="baseline-value"></output></label><input type="range" id="baseline" min="1" max="6" value="3"><div class="reference-presets" id="reference-presets"></div><label class="check-label"><input id="reference-confirmed" type="checkbox"> I felt reasonably well during this time</label><p class="hint">Your own note, not a clinical record.</p></details>
+ <div class="window-slider"><label for="window">Compare over <output id="window-value"></output></label><input type="range" id="window" min="1" max="3" value="1"><p class="hint">Longer stretches smooth out one-off days.</p></div>
+ <details class="adaptation-controls clinical-only"><summary>Adaptation and context</summary><label class="check-label"><input id="adaptive" type="checkbox"> Slowly adapt the reference</label><label for="adaptation-weight">Adaptive blend <output id="adaptation-weight-value">15%</output></label><input id="adaptation-weight" type="range" min="0" max="25" step="5" value="15"><p class="hint">Uses earlier eligible days only. The original anchor stays visible.</p><label class="check-label"><input id="context-adjustment" type="checkbox"> Apply recorded context</label><p class="hint">Illness and intentional changes can coexist with worsening mood. Adjustments do not establish lower clinical risk.</p></details>
+ <details class="source-box clinical-only"><summary>Source and measurement detail</summary><strong id="source-name"></strong><p id="resolution-note"></p><div id="availability"></div></details>
+</aside>
+<div class="drawer-scrim personal-only" data-close-controls></div>
+
+<div id="analysis" class="analysis">
+<section id="overview" class="overview">
+ <div id="score-panel" class="score-panel">
+  <div id="score-gauge" class="orb-wrap" aria-hidden="true"></div>
+  <div class="score-words"><p id="status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <p class="score-line"><span class="score-label">Change from usual</span> <strong id="score">—</strong><span class="of">of 1</span></p>
+  <div class="score-track"><i id="score-fill"></i></div>
+  <p id="score-note" class="soft"></p>
+  <button id="usual-link" class="usual-link personal-only" type="button" aria-controls="controls">Compared with <span id="usual-range">your usual</span></button></div>
+  <div id="score-stats" class="score-stats clinical-only"></div>
+ </div>
+ <div id="care-card" class="care-card personal-only" hidden></div>
+</section>
+
+<section id="checkin-panel" class="tile" hidden><h2 id="checkin-title"></h2><p id="checkin-summary" class="soft"></p><p class="hint">Sleep answers describe the night before. Picture choices are kept as chosen, not turned into mood scores.</p><details><summary>See the recorded answers</summary><p class="hint">Sleep labels follow the original questionnaire. Original codes are kept, grouped by UTC submission date.</p><div id="checkins" class="evidence"></div></details></section>
+
+<section class="board">
+ <div class="snapshot-panel"><p id="comparison-eyebrow" class="kicker clinical-only">Selected day vs reference</p><h2 id="snapshot-title">What stood out</h2><div id="snapshot-changes" class="snapshot-changes"></div><p class="hint" id="snapshot-note"></p></div>
+ <section class="route-panel" id="route-panel"><div class="tile-head"><div><p id="map-comparison-label" class="kicker clinical-only">Same person · selected day vs reference</p><h2>Where the day went</h2></div><span id="movement-period" class="soft-tag clinical-only"></span></div><div class="route-layout"><div id="movement-map" aria-label="Map of the selected day's movement and usual places"></div><div id="route-map" class="route-side"></div></div></section>
+</section>
+
+<section id="trajectory" class="tile trajectory-panel"><div class="tile-head"><h2 id="timeline-heading">How things have moved</h2><div id="timeline-legend" class="timeline-legend clinical-only" aria-hidden="true"><span class="lg-ref">Reference</span><span class="lg-win">Comparison</span><span class="lg-flag">Signal levels</span><span class="lg-miss">Missing</span></div></div><div id="phase-jumps" class="phase-jumps" aria-label="Jump to a part of the story"></div><a class="mobile-reference-link" href="#controls">Reference settings</a><div id="timeline" class="timeline" tabindex="0" role="slider" aria-orientation="horizontal" aria-label="Change over time. Use left and right arrows to move between days; Home and End jump to the ends." aria-describedby="chart-note"></div><div class="timeline-scrubber"><label for="period" class="sr-only">Selected observation <output id="period-value"></output></label><input type="range" id="period" min="0" max="11" value="11"></div><p id="chart-note" class="chart-footer clinical-only"></p><details class="all-periods clinical-only"><summary>Choose an individual observation</summary><div id="period-buttons" class="period-buttons"></div></details></section>
+
+<section id="companion-panel" class="tile companion-panel clinical-only"><div class="tile-head"><h2 id="companion-title">Multi-component signals</h2><span id="companion-badge" class="soft-tag"></span></div><div id="companion-signals" class="companion-grid"></div><p id="companion-note" class="hint"></p></section>
+
+<section id="vector-panel" class="tile vector-panel clinical-only"><div class="tile-head"><h2>Index breakdown</h2><strong id="vector-value">Not scored</strong></div><div class="vector-track"><div id="vector-fill"></div></div><div class="vector-scale"><span>0 · little measured change</span><span>1 · large measured change</span></div><p id="vector-description" class="soft"></p><details><summary>Compare anchored and adjusted indices</summary><div class="vector-comparison" id="vector-comparison"></div></details></section>
+<details id="evidence-panel" class="tile evidence-panel clinical-only"><summary>Measurement evidence</summary><div id="drift-table" class="evidence"></div><div id="evidence" class="evidence"></div></details>
+
+<details id="all-measurements" class="tile all-measurements"><summary>Show all measurements</summary><section class="metric-section"><h2 id="metrics-heading" class="sr-only">All measurements</h2><div id="metrics" class="metrics-grid" aria-label="Measured signals"></div></section></details>
+
+<details id="methods" class="tile method"><summary>How this works, and what it can't tell you</summary><div class="method-grid"><div><h3>What the number is</h3><p>An experimental index from 0 to 1 comparing a chosen day, or a short stretch, with a period you picked as your usual. It uses robust statistics and only counts changes in the harder direction. It is not a relapse probability, a diagnosis or an emergency alert.</p></div><div><h3>What it isn't</h3><p>Missing data is never counted as good or bad; it simply isn't scored. A single unusual day is noted, never flagged. Patterns need sustained evidence or slow drift across different domains against the original anchor. The daily baseline adapts slowly within a cap. Context remains visible; original anchored evidence is retained. These heuristic defaults need calibration on real outcomes before any clinical use. Demo people are made up; research participants keep their original observations only.</p></div><div><h3>Why you see so little</h3><p>Only noteworthy differences are shown up front. The thresholds are presentation choices, not clinical cut-offs. Every measurement is still used and is one click away.</p></div></div><details><summary>Noteworthy display thresholds</summary><div id="display-policy" class="evidence"></div></details><div class="source-coverage"><h3>Research data inventory</h3><div class="evidence"><table><thead><tr><th>Source</th><th>Processing state</th><th>Available data</th></tr></thead><tbody><tr><td>PSYCHE-D</td><td>4,948 people / 35,694 monthly records normalized</td><td>Activity and sleep features; survey context</td></tr><tr><td>StudentLife</td><td>49 recorded participant histories with daily GPS and check-ins</td><td>Genuine same-participant GPS, PAM image codes and sleep questionnaire reports; unscored</td></tr><tr><td>NFI FARED</td><td>111,121 trace rows statically inspected</td><td>Activity-context labels; no depression labels or GPS</td></tr><tr><td><a href="locations.html">SYN-RoadGps (separate mobility archive)</a></td><td>10,000 traces audited / 50 in the separate GPS explorer</td><td>Generated mobility traces only; no linked health measurements</td></tr><tr><td>Dryad multimodal study</td><td>Metadata only; downloads blocked (403/401)</td><td>No measurement rows available here</td></tr><tr><td>Demo stories</td><td>Constructed daily trajectories</td><td>Activity, sleep, heart rate, mood, routes and demo companion signals</td></tr></tbody></table></div><details class="nfi-details"><summary>Inspect NFI trace coverage</summary><div id="nfi-audit" class="evidence"></div></details></div><details><summary>Inspect the assessment contract</summary><pre id="contract"></pre></details></details>
+</div></div>
+<footer><span>Within, a Junction 2026 prototype.</span><span>An experimental measure of routine change. Not a diagnosis.</span></footer>
+</main>
+
+<div id="tour" class="tour" role="dialog" aria-modal="false" aria-labelledby="tour-title" hidden><div class="tour-progress" id="tour-progress"></div><p class="tour-kicker" id="tour-kicker">Tour</p><h3 id="tour-title"></h3><p id="tour-body"></p><div class="tour-actions"><button id="tour-close" class="quiet" type="button">Close</button><span class="tour-spacer"></span><button id="tour-back" class="ghost-btn" type="button">Back</button><button id="tour-next" class="solid-btn" type="button">Next</button></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="data/demo-data.js"></script><script src="data/nfi-overview.js"></script><script src="engine.js"></script><script src="vendor/leaflet/leaflet.js"></script><script src="data/map-streets.js"></script><script src="data/neighborhood-01.js"></script><script src="data/neighborhood-02.js"></script><script src="data/neighborhood-03.js"></script><script src="data/neighborhood-04.js"></script><script src="data/neighborhood-05.js"></script><script src="data/neighborhood-06.js"></script><script src="data/neighborhood-07.js"></script><script src="data/neighborhood-08.js"></script><script src="data/neighborhood-09.js"></script><script src="data/neighborhood-10.js"></script><script src="data/neighborhood-11.js"></script><script src="data/hanover-streets.js"></script><script src="movement-map.js"></script><script src="data/studentlife-data.js"></script><script src="insights.js"></script><script src="companion-signals.js"></script><script src="app.js"></script><script src="tour.js"></script></body></html>
