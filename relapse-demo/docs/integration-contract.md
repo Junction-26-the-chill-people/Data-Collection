@@ -53,7 +53,9 @@ The weights are a transparent placeholder for the hackathon, not learned or vali
 
 ## Export
 
-The viewer's assessment export (`contractVersion: "1.2.0"`, additive over 1.1.0) retains `componentSignals` and `combinedPreview`, and adds `alertState`, `persistence`, `drift` and `alerting` settings. The assessment also contains the frozen anchor, baseline used and next-day effective baseline. For daily inputs, consume alertState for pattern UI; score remains the selected-window change index. A single high day can have status no_change and alertState noted. The routine payload's componentVersion is supplied by the caller as routine-change/2.0.0; component validation and fusion semantics are unchanged. See engine.md for monthly compatibility and context behavior.
+The viewer's assessment export (`contractVersion: "1.3.0"`, additive over 1.2.0) retains `componentSignals`, `combinedPreview`, `alertState`, `persistence`, `drift` and `alerting` settings, and adds `ongoingPattern`. The assessment also contains the frozen anchor, baseline used and next-day effective baseline. For daily inputs, consume alertState for pattern UI; score remains the selected-window change index. A single high day can have status no_change and alertState noted. The routine payload's componentVersion is supplied by the caller as routine-change/2.1.0; component validation and fusion semantics are unchanged. See engine.md for monthly compatibility and context behavior.
+
+Export 1.3.0 adds `ongoingPattern` (also inside `assessment`); the CLI exposes `ongoing_pattern` under integration evidence. It is independent episode memory, not a replacement for daily `alertState` or a new component/fusion signal. It is null for monthly/disabled alerting. See engine.md for clearing rules, fields and missing-data semantics.
 
 ## Database integration
 

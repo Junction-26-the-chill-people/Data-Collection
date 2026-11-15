@@ -1,6 +1,6 @@
 # WITHIN — personal routine review
 
-**Current demo release: `daily-linked/1.5.0` (presentation `within-ui/3.0.0`), 14 November 2026. Analysis model: `routine-change/2.0.0`. Display policy: `noteworthy-display/1.0.0`. Component contract: `component-signal/0.1.0`; combined preview `combined-preview/0.1.0`; export contract `1.2.0`.** Check this release identifier and CHANGELOG.md before integrating; the standalone package includes an asset manifest.
+**Current demo release: `daily-linked/1.6.0` (presentation `within-ui/3.1.0`), 15 November 2026. Analysis model: `routine-change/2.1.0`. Display policy: `noteworthy-display/1.0.0`. Component contract: `component-signal/0.1.0`; combined preview `combined-preview/0.1.0`; export contract `1.3.0`.** Check this release identifier and CHANGELOG.md before integrating; the standalone package includes an asset manifest.
 
 ## Repository checkout
 

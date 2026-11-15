@@ -1,5 +1,5 @@
 {
-  "startedAt": "2026-11-14T17:25:46.874894+00:00",
+  "startedAt": "2026-11-15T01:56:21.723312+00:00",
   "javascript": [
     {
       "file": "cli.test.cjs",
@@ -9,7 +9,7 @@
     {
       "file": "cohort.test.cjs",
       "exitCode": 0,
-      "output": "{\n  \"modelVersion\": \"routine-change/2.0.0\",\n  \"participants\": 4959,\n  \"records\": 43211,\n  \"scored\": 17596,\n  \"statuses\": {\n    \"baseline\": 13702,\n    \"collecting_window\": 3207,\n    \"no_change\": 15303,\n    \"change_detected\": 1972,\n    \"insufficient_data\": 8709,\n    \"review_suggested\": 318\n  },\n  \"synthetic\": [\n    {\n      \"id\": \"sim-01\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-02\",\n      \"latest\": \"review_suggested\",\n      \"score\": 66,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-03\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-04\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-05\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 49\n    },\n    {\n      \"id\": \"sim-06\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-07\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-08\",\n      \"latest\": \"review_suggested\",\n      \"score\": 65,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-09\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-10\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-11\",\n      \"latest\": \"no_change\",\n      \"score\": 27,\n      \"scored\": 86\n    }\n  ],\n  \"failures\": []\n}"
+      "output": "{\n  \"modelVersion\": \"routine-change/2.1.0\",\n  \"participants\": 4959,\n  \"records\": 43211,\n  \"scored\": 17596,\n  \"statuses\": {\n    \"baseline\": 13702,\n    \"collecting_window\": 3207,\n    \"no_change\": 15303,\n    \"change_detected\": 1972,\n    \"insufficient_data\": 8709,\n    \"review_suggested\": 318\n  },\n  \"synthetic\": [\n    {\n      \"id\": \"sim-01\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-02\",\n      \"latest\": \"review_suggested\",\n      \"score\": 66,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-03\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-04\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-05\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 49\n    },\n    {\n      \"id\": \"sim-06\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-07\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-08\",\n      \"latest\": \"review_suggested\",\n      \"score\": 65,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-09\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-10\",\n      \"latest\": \"no_change\",\n      \"score\": 0,\n      \"scored\": 86\n    },\n    {\n      \"id\": \"sim-11\",\n      \"latest\": \"no_change\",\n      \"score\": 27,\n      \"scored\": 86\n    }\n  ],\n  \"failures\": []\n}"
     },
     {
       "file": "companion-signals.test.cjs",
@@ -30,6 +30,11 @@
       "file": "engine-alerting.test.cjs",
       "exitCode": 0,
       "output": "Stable-series false-flag rate: 0/400 0%; MK nonsignificant noise: 387/400\nPASS daily alerting: isolated/sustained/watch/drift, missingness, two domains, contexts, capped adaptation, 50 prefixes, immutable inputs, converted units, known trend statistics, validated defaults and legacy status mapping. Slow-drift first index: 152\nPASS nested alert config validation and effective exported parameters.\nPASS sparse indexed-calendar persistence abstention."
+    },
+    {
+      "file": "engine-hysteresis.test.cjs",
+      "exitCode": 0,
+      "output": "PASS isolated hard day never starts ongoing pattern\nPASS flag starts; three observed calmer days clear after daily flag ends\nPASS missing and undercovered days pause, never recover\nPASS non-calmer observed day resets recovery; equality does not clear\nPASS drift starts an episode even with quiet daily signals\nPASS new flag interrupts recovery and a later episode gets a new start\nPASS display window cannot change episode history\nPASS immutable input and no future leakage\nPASS context-suppressed non-mood evidence never starts an episode\nPASS monthly and explicitly disabled daily alerting have no episode\nPASS frozen validated config and configurable recovery length\nPASS ongoing-pattern hysteresis: 11 regression groups; existing daily assessment stays independent."
     },
     {
       "file": "engine.test.cjs",
@@ -85,8 +90,8 @@
   "python": {
     "exitCode": 0,
     "tests": 32,
-    "output": "................................\n----------------------------------------------------------------------\nRan 32 tests in 22.574s\n\nOK"
+    "output": "................................\n----------------------------------------------------------------------\nRan 32 tests in 22.887s\n\nOK"
   },
   "passed": true,
-  "completedAt": "2026-11-14T17:29:42.809714+00:00"
+  "completedAt": "2026-11-15T02:00:29.923304+00:00"
 }

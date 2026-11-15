@@ -1,5 +1,11 @@
 # Changelog
 
+## daily-linked/1.6.0 - 2026-11-15 · analysis routine-change/2.1.0
+
+- Added independent ongoing-pattern hysteresis: a daily flag starts an episode; three observed non-flagged days below protected index 0.20 with no drift clear it. Missing readings pause the count. Existing daily scores, flags, adaptation and component semantics are preserved.
+- Presentation within-ui/3.1.0 shows the earlier pattern separately in Personal and Clinical views. Additive export 1.3.0 includes ongoingPattern; monthly alerting has no episode.
+- Added engine and presentation regressions for recovery, gaps, equality thresholds, context, drift, display-window independence and future leakage. See docs/verification.md for exact checks. No dataset values or locations changed.
+
 ## Repository handoff - 2026-11-14
 
 Published the 1.5.0 source tree, tests, licensed dataset originals/derivatives and OSM snapshots in Data-Collection. Added repository README/agent rules, checksum inventory and standard-library bootstrap/test commands. Large CSV and normalization input are stored as lossless gzip; no Git LFS is required. NFI originals and an unlicensed tooling fixture are excluded; Dryad remains metadata-only. Analysis, viewer code, health values and component semantics are unchanged.

@@ -1,6 +1,6 @@
 # WITHIN — data collection and routine-change demo
 
-**Current release: `daily-linked/1.5.0` · analysis `routine-change/2.0.0` · presentation `within-ui/3.0.0` · export `1.2.0`.** Before integrating, fetch the repository and compare [release.json](relapse-demo/release.json) and the [changelog](relapse-demo/CHANGELOG.md). Agents must read [AGENTS.md](AGENTS.md) and update version notices, the changelog and verification together when behavior or data changes.
+**Current release: `daily-linked/1.6.0` · analysis `routine-change/2.1.0` · presentation `within-ui/3.1.0` · export `1.3.0`.** Before integrating, fetch the repository and compare [release.json](relapse-demo/release.json) and the [changelog](relapse-demo/CHANGELOG.md). Agents must read [AGENTS.md](AGENTS.md) and update version notices, the changelog and verification together when behavior or data changes.
 
 WITHIN is a hackathon prototype for noticing adverse changes in a person's usual activity, sleep, mood and movement. A selected known-good period is the frozen anchor; a bounded baseline can adapt slowly from earlier eligible days. A single harder day is **noted**, while repeated evidence or slow drift across domains can suggest a check-in. These are explainable demo heuristics, not a relapse probability, diagnosis or validated clinical alert.
 
@@ -47,7 +47,7 @@ python scripts/verify_repository.py
 python scripts/test_all.py --node node
 ```
 
-Tests require Python and Node.js, not npm. The handoff was tested with Node 24.22.1. The baseline release passed **16 JavaScript suites, 32 Python tests, 351 UI cases and 10,907 integration combinations**; see [verification](relapse-demo/docs/verification.md). A 400-series stable-noise fixture produced no flags; that is a software check, not clinical validation.
+Tests require Python and Node.js, not npm. The handoff was tested with Node 24.22.1. The current release passed **17 JavaScript suites, 32 Python tests, 351 UI cases and 10,907 integration combinations**; see [verification](relapse-demo/docs/verification.md). A 400-series stable-noise fixture produced no flags; that is a software check, not clinical validation.
 
 ## Datasets and licenses
 
@@ -74,7 +74,7 @@ Generated stories remain marked `synthetic:true`. No generated values fill resea
 | Companion app | Own reflections, images and check-ins; supply explicit observations/context and implement user-facing interactions |
 | Backend / patient identity | Authentication, consent, user mapping, access control and storage; schema lives in [DB-Data](https://github.com/Junction-26-the-chill-people/DB-Data) |
 
-A [current CLI export example](relapse-demo/data/analysis-example.json) shows the 1.2.0 envelope and routine-change/2.0.0 fields.
+A [current CLI export example](relapse-demo/data/analysis-example.json) shows the 1.3.0 envelope and routine-change/2.1.0 fields.
 
 Read [the integration contract](relapse-demo/docs/integration-contract.md), [engine rules](relapse-demo/docs/engine.md) and [recorded GPS linkage](relapse-demo/docs/studentlife.md). The displayed phone/feed/check-in component outputs for generated people are placeholders, not integrated detectors. `companion-signals.js` validates identity/date/provenance and computes an explicitly unvalidated combined preview. It does not implement the other teams' analyses.
 

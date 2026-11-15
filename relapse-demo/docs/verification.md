@@ -1,3 +1,25 @@
+# Verification — daily-linked/1.6.0 · 15 November 2026
+
+Analysis routine-change/2.1.0; presentation within-ui/3.1.0; additive export 1.3.0. Independent ongoing-pattern hysteresis was added without feeding back into daily scoring, flags, context, drift or baseline adaptation.
+
+## Automated verification
+
+The final `python scripts/test_all.py --node <node executable>` run passed **17 JavaScript suites and 32 Python tests**, including **351 UI render cases**, **10,907 UI/engine combinations**, 3,960 synthetic component payloads and the existing 400-series stable-noise check (0 flagged series). Exact final output and timestamps: [repository-tests.json](repository-tests.json). Bootstrap verified the two lossless restored inputs before the run.
+
+The new engine-hysteresis suite has 11 regression groups: isolated days, entry and three-observation clearing, missing/undercovered pauses, exact-threshold/reset behavior, drift, reopening/interruption, comparison-window independence, 25 future-prefix perturbations and frozen inputs, context suppression versus unsuppressed drift, monthly/disabled behavior, and frozen/validated custom configuration. Earlier fixture corrections distinguished a daily watch from steady and separated one-domain context suppression from intentionally unsuppressed multidomain drift. No existing engine/story expectations were weakened.
+
+Changed existing expectations: presentation.test.cjs expects export 1.3.0 and routine model 2.1.0 (including the routine component's caller-supplied version). It adds equality of the exported episode with the assessment, no episode for Sofia's isolated day, and active/missing/cleared notice checks in both views. cli.test.cjs adds schema 1.3.0 and episode passthrough assertions. Existing daily statuses, scores, care cards, orb colours, timeline states and story outcomes keep their previous expectations. Component contract/fusion semantics are unchanged.
+
+An independent comparison loaded the previous engine directly from commit `989591a061ea19475610cf5c5f8eb6e3734bce13`, then analyzed all **4,959 profiles / 43,211 observations** with both engines: 28-day/one-day daily settings and three-month/two-month research settings. After removing only the added ongoingPattern key, every point deep-equaled the old output, as did each baseline and analysis config. This covers all 4,948 monthly histories / 41,891 monthly points and 11 generated histories / 1,320 daily points. It is a software-preservation check, not clinical validation.
+
+## Actual browser verification
+
+Used the repository's loopback preview at port 8766, with viewport 1280×900 and 375×812. Mila on 17 April retains the earlier drift episode while today's status is steady; the separate notice is visible in Personal and Clinical. Neither phone view has horizontal overflow. Emil on 20 March shows 1/3 observed calmer days, 21 March shows 2/3, and the notice is hidden on 22 March after the third day. Console error log was empty. Missing-data notice behavior was covered by the DOM regression fixture, not claimed as a separate browser observation. Existing map stacking/other-person checks below are historical; this change did not alter map code or geometry.
+
+The shipped research/generated observation bundles, GPS and companion-signals.js are unchanged. Only analysis-example.json and audit model-version metadata changed among derived data outputs; the repository dataset inventory was refreshed and hash-verified. The standalone package was rebuilt and all packaged hashes/HTML dependencies verified. These thresholds and the word "calmer" describe a heuristic signal, not clinical recovery.
+
+---
+
 # Repository handoff verification — 14 November 2026
 
 The separate Data-Collection checkout was tested after copying the release without the original .tmp/.deps/work directories. The standard-library bootstrap restored and hash-verified the full normalized PSYCHE-D input and SYN-RoadGPS CSV from committed gzip archives. All 16 JavaScript suites and 32 Python tests passed, including 351 UI cases and 10,907 UI/engine combinations; exact output is in repository-tests.json.

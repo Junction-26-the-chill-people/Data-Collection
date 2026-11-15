@@ -34,12 +34,21 @@ ctx.WithinApp.go({window:7});assert.equal(contract().analysisConfig.windowSize,7
 ctx.WithinApp.go({window:1,view:'personal',index:64});assert.equal(el('status').textContent,"A harder day. One day on its own isn't a pattern.");assert.equal(el('care-card').hidden,true);ctx.WithinApp.go({index:65});assert.equal(contract().assessment.alertState,'steady');assert.equal(el('care-card').hidden,true);
 ctx.WithinApp.go({participantId:'sim-11',index:99,window:1,view:'clinical'});assert.equal(contract().assessment.alertState,'flag_drift');assert.equal(contract().assessment.status,'review_suggested');assert(contract().assessment.drift.triggered);assert(el('drift-table').innerHTML.includes('✓'));assert(el('care-card').innerHTML.includes('A slow change over the past weeks.'));assert(contract().assessment.daySignal.score<35,'slow drift can flag while the day signal stays quiet');
 ctx.WithinApp.go({window:1,view:'personal',participantId:'sim-02',index:100});
+// Ongoing pattern is separate from the unchanged daily status, in both views.
+assert.equal(el('ongoing-pattern').hidden,false);assert(el('ongoing-pattern').textContent.includes('earlier pattern'));
+ctx.WithinApp.go({participantId:'sim-09',index:64});assert.equal(el('ongoing-pattern').hidden,true,'an isolated harder day has no ongoing pattern');
+const episodePerson=structuredClone(synthetic.find(p=>p.id==='sim-02'));
+for(let i=0;i<episodePerson.records.length;i++){const r=episodePerson.records[i];r.missingPeriod=false;r.contexts=[];r.values={steps:8500,mood:3.9,sleep_hours:7.5,sleep_efficiency:95,bedtime_hour:23,heart_rate:60,home_hours:16};if(i>=40&&i<=46)r.values={steps:500,mood:1,sleep_hours:2,sleep_efficiency:30,bedtime_hour:4,heart_rate:85,home_hours:24};}
+episodePerson.records[50].missingPeriod=true;
+const episodeApp=boot([episodePerson]);
+for(const view of ['personal','clinical']){episodeApp.ctx.WithinApp.go({participantId:episodePerson.id,index:49,window:1,view,reset:true});assert.equal(episodeApp.el('ongoing-pattern').hidden,false);assert(episodeApp.el('ongoing-pattern').textContent.includes('1 of 3'));episodeApp.ctx.WithinApp.go({index:50});assert.equal(episodeApp.contract().assessment.alertState,'insufficient_data');assert(episodeApp.el('ongoing-pattern').textContent.includes('paused'));episodeApp.ctx.WithinApp.go({index:52});assert.equal(episodeApp.el('ongoing-pattern').hidden,true);}
+ctx.WithinApp.go({window:1,view:'personal',participantId:'sim-02',index:100});
 // Companion panel + export for a demo person: synthetic components labelled, combined preview present.
 assert(el('companion-signals').innerHTML.includes('Demo'));assert.equal(el('companion-badge').textContent,'Demo component outputs');
 app.trigger('export','click');let exp;
 const readBlob=async()=>JSON.parse(await ctx.blob.text());
 (async()=>{
- exp=await readBlob();assert.equal(exp.contractVersion,'1.2.0');assert.equal(exp.alertState,'flag_sustained');assert.deepEqual(exp.persistence,exp.assessment.persistence);assert.deepEqual(exp.drift,exp.assessment.drift);assert.equal(exp.alerting.version,'routine-change/2.0.0');assert.equal(exp.synthetic,true);assert.equal(exp.componentSignals.length,4);assert.equal(exp.componentSignals.find(s=>s.componentId==='routine').componentVersion,'routine-change/2.0.0');
+ exp=await readBlob();assert.equal(exp.contractVersion,'1.3.0');assert.equal(exp.alertState,'flag_sustained');assert.deepEqual(exp.persistence,exp.assessment.persistence);assert.deepEqual(exp.drift,exp.assessment.drift);assert.equal(exp.alerting.version,'routine-change/2.1.0');assert.deepEqual(exp.ongoingPattern,exp.assessment.ongoingPattern);assert.equal(exp.ongoingPattern.active,true);assert.equal(exp.synthetic,true);assert.equal(exp.componentSignals.length,4);assert.equal(exp.componentSignals.find(s=>s.componentId==='routine').componentVersion,'routine-change/2.1.0');
  assert(exp.componentSignals.filter(s=>s.componentId!=='routine').every(s=>s.synthetic===true&&/^demo-generator/.test(s.provenance)));
  assert(exp.componentSignals.every(s=>s.participantRef==='sim-02'&&s.dayKey==='sim-02:'+exp.selectedObservation.date));
  assert.equal(exp.combinedPreview.fusionVersion,'combined-preview/0.1.0');assert.equal(exp.combinedPreview.includesSynthetic,true);assert(exp.limitations.some(l=>/generated demo outputs/.test(l)));

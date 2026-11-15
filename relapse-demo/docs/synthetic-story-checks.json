@@ -1,6 +1,6 @@
 {
   "interpretation": "Generated software scenarios; no clinical validation or real-patient outcome claims",
-  "modelVersion": "routine-change/2.0.0",
+  "modelVersion": "routine-change/2.1.0",
   "results": {
     "sim-01": {
       "name": "Mara · steady rhythm",

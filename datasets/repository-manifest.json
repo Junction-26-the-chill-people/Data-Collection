@@ -1,6 +1,6 @@
 {
   "version": "repository-data/1.0.0",
-  "release": "daily-linked/1.5.0",
+  "release": "daily-linked/1.6.0",
   "note": "Inventory of shipped files, distinct from original publisher download availability. Restored archive targets are checked by bootstrap.py. No clinical validation is implied.",
   "files": [
     {
@@ -250,8 +250,8 @@
     },
     {
       "path": "relapse-demo/data/analysis-example.json",
-      "bytes": 64604,
-      "sha256": "da476efdaa2a623a8e1fea47c2e3ad2595a9166c34792a7c629f78ecc112f153"
+      "bytes": 65241,
+      "sha256": "9a1a3ddd3b47bc8529f48f8fec86131f43b4fa9a7ca1fb67d7d208514f0c28e5"
     },
     {
       "path": "relapse-demo/data/bundle-manifest.json",
@@ -276,7 +276,7 @@
     {
       "path": "relapse-demo/data/engine-cohort-audit.json",
       "bytes": 1461,
-      "sha256": "1c489c5193f53792de4c503f73a2452a61d92c67a570ba28ce9e55043cb937d3"
+      "sha256": "afd4852ffa8355ede69053fde7c133d0acfe65e4e0f7608212b8458985050019"
     },
     {
       "path": "relapse-demo/data/hanover-streets.geojson",

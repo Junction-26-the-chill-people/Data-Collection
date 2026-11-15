@@ -1,7 +1,7 @@
 /* Dependency-free, deterministic research change detector. No clinical calibration. */
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.RoutineEngine=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
-const MODEL_VERSION='routine-change/2.0.0';
+const MODEL_VERSION='routine-change/2.1.0';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
 const clamp=(x,a,b)=>Math.min(b,Math.max(a,x));
 const adverse=(delta,direction)=>Math.max(0,direction==='lower'?-delta:direction==='higher'?delta:Math.abs(delta));
@@ -16,14 +16,15 @@ function value(record,id){const v=record&&!record.missingPeriod&&record.values&&
 function deepFreeze(v){if(v&&typeof v==='object'){Object.values(v).forEach(deepFreeze);Object.freeze(v);}return v;}
 // steps is a fraction of the anchor; all other relativeMin entries use absolute
 // native metric units. Callers converting units must also convert these minima.
-const ALERT_DEFAULTS=deepFreeze({enabled:true,tolerance:{z:1},adapt:{alpha:.05,maxWeight:.25},driftCap:{scaleMultiple:.5,relative:.10},noted:{index:.35},sustained:{index:.35,k:5,m:7,minObserved:4},watch:{k:3,m:7},drift:{window:14,trendWindow:28,z:2,mkP:.05,minMetrics:2,relativeMin:{steps:.25,sleep_hours:1,sleep_efficiency:5,bedtime_hour:1,heart_rate:5,mood:.8,home_hours:2,active_days:2,short_sleep_nights:2}},domains:{sleep:['sleep_hours','sleep_efficiency','bedtime_hour','short_sleep_nights'],activity:['steps','active_days'],mood:['mood'],physiology:['heart_rate'],place:['home_hours']}});
+const ALERT_DEFAULTS=deepFreeze({enabled:true,tolerance:{z:1},adapt:{alpha:.05,maxWeight:.25},driftCap:{scaleMultiple:.5,relative:.10},noted:{index:.35},sustained:{index:.35,k:5,m:7,minObserved:4},watch:{k:3,m:7},hysteresis:{clearBelow:.20,observedDays:3},drift:{window:14,trendWindow:28,z:2,mkP:.05,minMetrics:2,relativeMin:{steps:.25,sleep_hours:1,sleep_efficiency:5,bedtime_hour:1,heart_rate:5,mood:.8,home_hours:2,active_days:2,short_sleep_nights:2}},domains:{sleep:['sleep_hours','sleep_efficiency','bedtime_hour','short_sleep_nights'],activity:['steps','active_days'],mood:['mood'],physiology:['heart_rate'],place:['home_hours']}});
 function alertConfig(input){
  if(input!==undefined&&(!input||typeof input!=='object'||Array.isArray(input)))throw new TypeError('alerting must be a configuration object');
  const a=input||{},c={...ALERT_DEFAULTS,...a};
- for(const key of ['tolerance','adapt','driftCap','noted','sustained','watch','drift']){if(a[key]!==undefined&&(!a[key]||typeof a[key]!=='object'||Array.isArray(a[key])))throw new TypeError('Invalid alerting '+key);c[key]={...ALERT_DEFAULTS[key],...a[key]};}
+ for(const key of ['tolerance','adapt','driftCap','noted','sustained','watch','hysteresis','drift']){if(a[key]!==undefined&&(!a[key]||typeof a[key]!=='object'||Array.isArray(a[key])))throw new TypeError('Invalid alerting '+key);c[key]={...ALERT_DEFAULTS[key],...a[key]};}
  if(a.domains!==undefined&&(!a.domains||typeof a.domains!=='object'||Array.isArray(a.domains)))throw new TypeError('alerting.domains must be an object');
  if(a.drift?.relativeMin!==undefined&&(!a.drift.relativeMin||typeof a.drift.relativeMin!=='object'||Array.isArray(a.drift.relativeMin)))throw new TypeError('drift.relativeMin must be an object');
  c.drift.relativeMin={...ALERT_DEFAULTS.drift.relativeMin,...a.drift?.relativeMin};c.domains={...ALERT_DEFAULTS.domains,...a.domains};
+ if(!finite(c.hysteresis.clearBelow)||c.hysteresis.clearBelow<=0||c.hysteresis.clearBelow>=Math.min(c.noted.index,c.sustained.index)||!Number.isInteger(c.hysteresis.observedDays)||c.hysteresis.observedDays<2||c.hysteresis.observedDays>366)throw new RangeError('Hysteresis requires a lower clearing threshold and 2..366 observed days');
  if(typeof c.enabled!=='boolean')throw new TypeError('alerting.enabled must be boolean');
  for(const v of [c.tolerance.z,c.driftCap.scaleMultiple,c.driftCap.relative,c.drift.z])if(!finite(v)||v<0)throw new RangeError('Alert scales must be finite and nonnegative');
  for(const v of [c.noted.index,c.sustained.index])if(!finite(v)||v<=0||v>1)throw new RangeError('Alert index thresholds must lie in (0,1]');
@@ -84,15 +85,29 @@ function driftState(records,days,index,lastBaseline,baseline,metrics,c){
 }
 const oldToAlert={no_change:'steady',change_detected:'watch',review_suggested:'flag_sustained'};
 const alertToOld={steady:'no_change',noted:'no_change',watch:'change_detected',flag_sustained:'review_suggested',flag_drift:'review_suggested'};
+// Independent episode memory: never feeds back into scores, daily states or adaptation.
+function ongoingPattern(previous,index,day,state,drift,c){
+ const p=previous?{...previous}:{active:false,startedIndex:null,lastFlagIndex:null,lastFlagState:null,recoveryDays:0,clearedIndex:null};
+ p.clearAfter=c.hysteresis.observedDays;p.clearBelow=c.hysteresis.clearBelow;p.observed=Boolean(day?.observed);
+ if(!p.observed)return p; // Gaps pause consecutive *observed* recovery days.
+ if(state.startsWith('flag_')){if(!p.active)p.startedIndex=index;p.active=true;p.lastFlagIndex=index;p.lastFlagState=state;p.recoveryDays=0;p.clearedIndex=null;}
+ else if(p.active){
+  const h=Math.max(day.anchoredScore,day.rawScore)/100;
+  p.recoveryDays=finite(h)&&h<p.clearBelow&&!drift.triggered?p.recoveryDays+1:0;
+  if(p.recoveryDays>=p.clearAfter){p.active=false;p.clearedIndex=index;}
+ }
+ return p;
+}
 function runAlerting(records,points,computePoint,baseline,metrics,o,c){
- const anchor=Object.fromEntries(metrics.map(m=>[m.id,baseline.metrics[m.id].median])),ewma={...anchor},snapshots=[],days=[],states=[],updates=[];let firstFlagIndex=null,firstFlagState=null;
+ const anchor=Object.fromEntries(metrics.map(m=>[m.id,baseline.metrics[m.id].median])),ewma={...anchor},snapshots=[],days=[],states=[],updates=[];let firstFlagIndex=null,firstFlagState=null,ongoing=null;
  for(let t=0;t<records.length;t++){
-  if(t<=baseline.endIndex){const point=points[t];point.alertState=oldToAlert[point.status]||point.status;point.alertReason=null;point.anchorBaseline={...anchor};point.baselineUsed={...anchor};point.effectiveBaseline={...anchor};point.persistence={window:c.sustained.m,observedDays:0,highDays:0,flaggedDays:0,threshold:c.sustained.index,k:c.sustained.k};point.drift={triggered:false,domains:[],metrics:[]};snapshots[t]={...anchor};states[t]=point.alertState;continue;}
+  if(t<=baseline.endIndex){const point=points[t];point.alertState=oldToAlert[point.status]||point.status;point.alertReason=null;point.anchorBaseline={...anchor};point.baselineUsed={...anchor};point.effectiveBaseline={...anchor};point.persistence={window:c.sustained.m,observedDays:0,highDays:0,flaggedDays:0,threshold:c.sustained.index,k:c.sustained.k};point.drift={triggered:false,domains:[],metrics:[]};point.ongoingPattern=ongoingPattern(null,t,null,point.alertState,point.drift,c);snapshots[t]={...anchor};states[t]=point.alertState;continue;}
   const before=snapshots[t-1]||anchor,day=computePoint(records[t],t,1,before);day.observed=!records[t].missingPeriod&&finite(day.score)&&day.coverage>=o.minCoverage;days[t]=day;
   const start=Math.max(baseline.endIndex+1,t-o.windowSize+1),used=snapshots[start-1]||anchor,point=computePoint(records[t],t,o.windowSize,used);points[t]=point;
   const persistence=persistenceState(days,t,baseline.endIndex,records,c),drift=day.observed?driftState(records,days,t,baseline.endIndex,baseline,metrics,c):{triggered:false,domains:[],metrics:[]};
   let state=!day.observed?'insufficient_data':drift.triggered?'flag_drift':persistence.state;states[t]=state;
   const update=updateEffectiveBaseline(records[t],t,day,states[t-1],state,ewma,baseline,metrics,o,c);updates.push(...update.updates);snapshots[t]=update.effective;
+  ongoing=ongoingPattern(ongoing,t,day,state,drift,c);point.ongoingPattern=ongoing;
   if(!finite(point.score))state=point.status;
   point.alertState=state;point.alertReason=state==='noted'?'single_day':state==='watch'?'emerging':state==='flag_sustained'?'k_of_m':state==='flag_drift'?'drift':null;
   point.status=alertToOld[state]||state;point.persistence=persistence.persistence;point.drift=drift;point.anchorBaseline={...anchor};point.baselineUsed={...used};point.effectiveBaseline={...update.effective};
@@ -198,7 +213,7 @@ function analyze(records,options){
  const points=records.map((record,index)=>computePoint(record,index));
  let alerting;
  if(dailyAlerts)alerting=runAlerting(records,points,computePoint,baseline,metrics,o,ac);
- else{for(const point of points){point.alertState=oldToAlert[point.status]||point.status;point.alertReason=null;}alerting={version:MODEL_VERSION,enabled:false,config:{...ac,enabled:false},firstFlagIndex:null,firstFlagState:null};}
+ else{for(const point of points){point.alertState=oldToAlert[point.status]||point.status;point.alertReason=null;point.ongoingPattern=null;}alerting={version:MODEL_VERSION,enabled:false,config:{...ac,enabled:false},firstFlagIndex:null,firstFlagState:null};}
  return {modelVersion:MODEL_VERSION,alerting,scoreMeaning:'Directional behavior-change index; relapseVector is an integration alias, not a clinical relapse probability',baseline,points,latest:points.length?points[points.length-1]:null,config:{windowSize:o.windowSize,minBaseline:o.minBaseline,minMetrics:o.minMetrics,minCoverage:o.minCoverage,granularity:o.granularity||'observation',adaptive:o.adaptive,adaptiveWeight:o.adaptiveWeight,adaptiveAlpha:o.adaptiveAlpha,contextWeights:Object.assign({},o.contextWeights),contextMetricIds:Object.fromEntries(Object.entries(CONTEXT_METRICS).map(([k,v])=>[k,v.slice()]))}};
 }
 return {analyze,median,MODEL_VERSION,ALERT_DEFAULTS,theilSen,mannKendall};
